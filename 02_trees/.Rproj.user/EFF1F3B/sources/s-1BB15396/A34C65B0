@@ -1,0 +1,26 @@
+{
+    "id": "A34C65B0",
+    "path": "~/Desktop/git_local/sarscov2_canada_2020/02_trees/Root.R",
+    "project_path": "Root.R",
+    "type": "r_source",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1633641704194.0,
+    "source_on_save": false,
+    "relative_order": 3,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "10,15",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1633645535,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1633645535677,
+    "read_only": false,
+    "read_only_alternatives": []
+}

@@ -1,0 +1,77 @@
+#!/usr/bin/env Rscript
+
+# make sure that fasta and trees files are in the format needed for IQTREE2 LSD2 and make a datefile for LSD2
+
+#usage:
+# $Rscript FixNamesMakeDates.R <folder with trees and fasta, outliers removed>
+# $Rscript FixNamesMakeDates.R "ft_root_res"
+
+# setup libs
+library(ape)
+library(stringr)
+library(xts)
+library(gtools)
+
+#### Inputs and outputs ####
+args<-commandArgs(trailingOnly=TRUE)
+treebase<-args[1] #folder with trees and alignments corresponding to trees
+
+# ## Or, change inputs manually
+# treebase<-"ft_root_res"
+
+#setup treefiles, alignment files using folders
+trees.in<-list.files(treebase,pattern = ".tre",full.names = T)
+#sort these in numeric order
+trees.in<-mixedsort (trees.in)
+
+#setup alignment files using folders
+aligns.in<-list.files(treebase,pattern = ".fasta",full.names = T)
+#sort these in numeric order
+aligns.in<-mixedsort (aligns.in)
+
+#number of bootstraps
+b<-length(trees.in)
+
+#set up outputs
+output.fold<-"ft_root_res_time/LSDin"
+if (!dir.exists(output.fold)) {dir.create(output.fold)}
+
+#go through all bootstraps
+i=1
+for (i in 1:b){  
+  t<-read.tree(trees.in[i])
+  f<-read.FASTA(aligns.in[i])
+
+  names(f)[str_which(names(f),"2019-")] #"China/2019-12-26/EPI_ISL_402125" #wuhan-hu-1 as outgroup
+  # names(f)[str_which(names(f),"2020-01-05")] #A as alternative...
+  
+  #checks
+  length(names(f))==length(t$tip.label)
+  all(names(f)==t$tip.label)
+  all(names(f) %in% t$tip.label)
+  
+  #reorder the fasta to match tree
+  ff<-f[order(match(names(f), t$tip.label))]
+  all(names(ff)==t$tip.label)
+  
+  ## export a datefile from this tree
+  #extract tipnames
+  nm<-t$tip.label
+  
+  #parse the dates
+  dates<-data.frame(node_name=nm,date=NA)
+  for (j in 1:length(nm)){
+    dates$date[j]<-unlist(strsplit(nm[j],split="/"))[[2]]
+  }
+  
+    
+  # write fixed tree and fasta
+  write.tree(t,paste(output,"/fasttree_inc_rooted_res_",i,".tre",sep=""))
+  write.FASTA(ff,paste(output,"/fasttree_inc_rooted_res",i,".fasta",sep=""))
+
+  #now export the dates
+  write.table(dates, paste(output,"/dateFile_",i,".txt",sep=""), row.names=F, sep="\t", quote = F, col.names=F)
+
+}
+
+

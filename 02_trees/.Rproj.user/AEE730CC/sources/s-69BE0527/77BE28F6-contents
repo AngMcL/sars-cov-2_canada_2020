@@ -1,0 +1,520 @@
+#!/usr/bin/env Rscript
+
+# Make timetree figure for the highest likelihood tree of the bootstrap set
+
+#usage:
+# $Rscript PlotTreeFigure.R "finaltree" 
+
+#### Inputs and outputs ####
+args<-commandArgs(trailingOnly=TRUE)
+tree.in<-args[1] #tree file
+
+# ## Or, change inputs manually
+tree.in<-"ft_root_res_time/*********"
+
+#setup libs
+library(ape)
+library(ggplot2)
+library(ggtree)
+library(RColorBrewer)
+library(lubridate)
+library(stringr)
+library(phangorn)
+library(stringr)
+
+## inputs and outputs
+#color schemes
+colors.in<-"../../03c_MLstate_boots/DF/globalcolorsNew.tsv" 
+lin.colors.in<-"../../03c_MLstate_boots/DF/lineagecolors.tsv"
+lin.grp.colors.in<-"../../03c_MLstate_boots/DF/lineageGroupColors.tsv"
+
+#lineage lookup table
+lin.lookup.in<-"../../03c_MLstate_boots/DF/lineageGroups.csv"
+
+#bootstrap setup
+boot<-"b9"
+tree.in<-"../subsamp_all/boots2_ft_rooted_res_timed/boots2_LSDout/fasttree_inc_rooted_res9.fasta.timetree.nex.binary.tre"
+meta.in<-"../../03c_MLstate_boots/DF/meta.b9.csv"
+
+# #bootstrap 1
+# boot<-"b1"
+# tree.in<-"../subsamp_all/ft_rooted_res_timed/inc_fill_LSD_out/fasttree_inc_rooted_res1_fix.fasta.timetree.nex.binary.tre"
+# #metadata
+# meta.in<-"../../03b_MLstate_timetree/DF/20210211_metab1.csv"
+
+#overall across bootstraps
+#most recent sampling date
+mrsd="2021-02-04"
+
+#tmrca 
+tmrca<-"2019-12-08" 
+tmrca.dt<-format(as.Date(tmrca),"%d %b %Y")
+tmrca.dt.up<-format(as.Date("2019-10-28"),"%d %b %Y")
+tmrca.dt.low<-format(as.Date("2019-12-09"),"%d %b %Y")
+
+
+#set up directory if doesn't exist
+fold.out<-"timeTrees/"
+if(!dir.exists(fold.out)){dir.create(fold.out)}
+
+
+
+
+## setup province colors
+
+#import a tsv of name and hex color 
+globalPalette<-read.table(colors.in,sep="\t")
+
+## make color scheme for Lineages
+glob.colz<-row.names(globalPalette)
+globalPalette.ch<-as.character(globalPalette$globalPalette)
+names(globalPalette.ch)<-glob.colz
+
+provPalette<-globalPalette.ch[str_which(names(globalPalette.ch),"Alberta|British Columbia|Manitoba|Maritimes|Ontario|Quebec") ] 
+#Prince Edward Island|Yukon|Northwest Territories|Nunavut
+
+colScale<-scale_colour_manual(name = "Canadian\nprovince",values = provPalette)
+fillScale<-scale_fill_manual(name = "Canadian\nprovince",values = provPalette)
+
+
+
+## Read in tree and data
+
+#binarized newick tree (from multifurcating nexus)
+tn<-read.tree(tree.in)
+# tn<-ladderize(tn,right=F)
+#import appropriate metadata
+meta<-read.csv(meta.in,header=T)
+
+#remove any tips not found in the tree
+meta<-meta[which(meta$tip.label %in% tn$tip.label), ]
+nrow(meta)==Ntip(tn)
+
+#sort to match tree
+meta<-meta[match(tn$tip.label,meta$tip.label),]
+
+#convert martimes provinces
+meta$division<-str_replace_all(meta$division, "Nova Scotia|New Brunswick|Newfoundland and Labrador|Newfoundland\nand Labrador","Maritimes")
+
+#only keep cols you want to use as features in tree and tip labels
+t.df<-meta[,c("new.names","country","division")]
+colnames(t.df)<-c("tip.label","country","division")
+
+#make a column for canada yes or no
+t.df$canada<-0
+t.df$province<-NA
+
+for (i in 1:nrow(t.df)){
+  if (t.df$country[i]=="Canada") {t.df$canada[i]<-1; t.df$province[i]<-t.df$division[i] }
+}
+# table(t.df$canada)
+table(as.factor(t.df2$province))
+
+
+## Basic trees
+##  baseplot}
+#Plot the timetree, plain
+
+p1<-ggtree(tn,mrsd=mrsd, as.Date=TRUE, aes(na.rm=T,color="state"),lwd=0.05,color="grey70")+
+  theme_tree2() +#add scale bar on x axis
+  theme(axis.text=element_text(size=18))
+# p1
+# ggsave("timeTreePlots/0211_timetree.png",width=9, height=10, units = "in")
+
+
+## find the nodes to rotate on
+
+A.X1<-sample(t.df2$tip.label[t.df2$`Lineage Group`=="A*"],size=1)
+B.X1<-sample(t.df2$tip.label[t.df2$`Lineage Group`=="B*"],size=1)
+MRCA.1<-getMRCA(tn,tip=c(A.X1,B.X1))
+subtr<-extract.clade(tn,node=MRCA.1)
+submet<-t.df2[match(subtr$tip.label,t.df2$tip.label),]
+pp<-ggtree(subtr)
+pp2<-pp %<+% submet
+pp3<-pp2+
+  geom_tippoint(aes(color=`Lineage Group`))
+pp3
+library(ggtree)
+p1.1<-ggtree::rotate(p1,node=MRCA.1)
+
+
+
+## build up detail for time tree
+
+#make dataframe for single point in annotation
+point<-data.frame(x=as.Date("2019-12-16"), y=7050)
+
+## timetree root date annotate
+p2<-p1+
+  geom_rootpoint(color="darkolivegreen", size=4, shape=18,alpha=0.9)+
+  annotate("text", as.Date("2019-11-15"), 5700, hjust=0, size=3, label=paste("tMRCA\n",tmrca.dt,"\n(",tmrca.dt.up," -\n",tmrca.dt.low,")", sep=""),fontface="bold")+
+  geom_point(data=point, aes(x=x,y=y),color="darkolivegreen", size=4, shape=18,alpha=0.9)
+
+#merge metadata with tree 
+p3<- p2 %<+% t.df [,c("tip.label","canada","province")]
+
+## color provinces
+colScale<-scale_colour_manual(name = "Canadian\nprovince",values = provPalette, labels=names(provPalette), breaks=names(provPalette))
+
+p5<-p3+
+  geom_tippoint(aes(color=as.factor(province),size=as.factor(canada)), shape=16, na.rm = TRUE,alpha=0.9)+
+  colScale+
+  scale_size_manual(values = c(-1,1),guide=FALSE)+
+  scale_y_continuous(expand=c(0.01,0)) +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b %Y",
+               limits=as.Date(c("2019-11-10","2021-02-11")), expand=c(0.01,0))+
+  theme(axis.text.x=element_text(angle=40,hjust = 1,size=10),
+        axis.title.x = element_text(size=12),
+        plot.margin=unit(c(1.5,0,0,0),"cm"),
+        legend.title = element_text(face="bold"),
+        legend.text=element_text(size=10), 
+        legend.key.height=unit(.2, "in"),
+        legend.key.width=unit(.1, "in"), 
+        legend.position=c(0.5,0.99), 
+        legend.direction = "horizontal", 
+        legend.justification = "bottom")+
+  guides(color=guide_legend(override.aes = list(size=4),ncol=6,title.position="top", title="Province"))+
+  coord_cartesian(clip="off")
+p5
+ggsave(paste(fold.out,boot,"_timetree.png",sep=""),width=8, height=10, units = "in")
+
+
+# Lineage Group
+## Setup for lineage group
+
+#import a tsv of name and hex color 
+linGrpPalette<-read.table(lin.grp.colors.in,sep="\t")
+
+## make color scheme for Lineage groups
+linGrp.colz<-row.names(linGrpPalette)
+linGrpPalette.ch<-as.character(linGrpPalette$mygrpz.col)
+names(linGrpPalette.ch)<-linGrp.colz
+
+# collinGrpScale<-scale_colour_manual(name = "Canadian\nprovince",values = linGrpPalette.ch)
+filllinGrpScale<-scale_fill_manual(name = "Lineage\nGroup",values = linGrpPalette.ch,na.translate = F)
+collinGrpScale<-scale_color_manual(name = "Lineage\nGroup",values = linGrpPalette.ch,na.translate = F)
+
+#make lineage group col in meta (not in this version)
+lookup.lin<-read.csv(lin.lookup.in,header = T) #lineage group, alias (longform), lineagre
+meta$Lineage.grp<-NA
+for (i in 1:nrow(meta)){
+  match<-which(lookup.lin$lineage==meta$Lineage[i])
+  if(length(match)>0){
+      meta$Lineage.grp[i]<-lookup.lin$lineagegroup[which(lookup.lin$lineage==meta$Lineage[i])]
+  }
+}
+# length(which(is.na(meta$Lineage.grp)))
+# meta[which(is.na(meta$Lineage.grp)),]
+
+
+
+## Add in the lineage GROUP as an annotation on the right side
+
+t.df2<-meta[,c("tip.label","country","division","Lineage.grp")]
+colnames(t.df2)<-c("tip.label","country","division","Lineage Group")
+
+#make a column for canada yes or no
+t.df2$canada<-0
+t.df2$province<-NA
+
+for (i in 1:nrow(t.df2)){
+  if (t.df2$country[i]=="Canada") {t.df2$canada[i]<-1; t.df2$province[i]<-t.df2$division[i] }
+}
+
+#add lineage annotation layer
+t.df3<-t.df2
+rownames(t.df3)<-t.df3$tip.label
+t.df3<-t.df3[,'Lineage Group',drop=FALSE]
+colnames(t.df3)<-"Lineage\nGroup"
+
+#lineage group layer
+plin<-gheatmap(p5, t.df3, offset = 0.01, color=NULL, width=0.03,
+         colnames_position="top",colnames_offset_y=1410,family = "bold") +
+  scale_fill_manual(values=linGrpPalette.ch, guide=FALSE,na.translate = F)
+
+#tree layer
+plin2<- plin + 
+  scale_x_date(date_breaks = "1 month", date_labels = "%b %Y", limits=as.Date(c("2019-11-10","2021-03-07")), expand=c(0.01,0))+
+  theme(axis.text.x=element_text(angle=40,hjust = 1,size=10),
+        legend.text=element_text(size=10), 
+        legend.key.height=unit(.2, "in"),
+        legend.key.width=unit(.1, "in"), 
+        axis.title.x = element_text(size=12))+
+  guides(color=guide_legend(override.aes = list(size=4),ncol=6,title.position="top", title="Province"))+
+  theme(plot.margin=unit(c(0.6,0,0,0),"cm"),
+        legend.position=c(0.5,0.96), 
+        legend.direction = "horizontal", 
+        legend.justification = "bottom")+
+  coord_cartesian(clip="off")
+
+  
+
+plin2
+ggsave(paste(fold.out,boot,"_timetree_linGrps.png",sep=""),width=8,height=10,units="in")
+
+
+
+
+## WORK in progress
+
+## try adding highlights for sublineages
+
+
+try<-groupClade(tn,.node=c(1,2))
+# geom_hilight	
+
+
+
+# g1 = as(tn, 'phylo4')
+# d = data.frame(color=sample(c('red', 'blue', 'green'), 30, replace=T))
+# rownames(d) = tr$tip.label
+# g2 = phylo4d(g1, d)
+# 
+# rNodeData <- data.frame(randomTrait = rnorm(nNodes(g1)),
+#                         color = sample(c('purple', 'yellow', 'black'), nNodes(g1), replace=T),
+#                         row.names = nodeId(g1, "internal"))
+# nodeData(g2) <- rNodeData
+# ggtree(g2, aes(color=I(color)))
+
+
+
+# Color branches by tip state
+
+
+  t.p2<-t.p %<+% t.df [,c("tip.label","state")]
+ggtree(t,aes(color="state"))+
+    geom_tippoint(aes(color=state),size=2, shape=17)
+
+require(ggtree)
+require(phylobase)
+require(dplyr)
+
+# d = data.frame(node=1:59, color=sample(c('red', 'blue', 'green'), 59, replace=T))
+# ggtree(tr) %<+% d + aes(color=I(color))
+
+# set.seed(123)
+# tr = rtree(30)
+# g1 = as(tr, 'phylo4')
+# d = data.frame(color=sample(c('red', 'blue', 'green'), 30, replace=T))
+# rownames(d) = tr$tip.label
+# g2 = phylo4d(g1, d)
+# 
+# rNodeData <- data.frame(randomTrait = rnorm(nNodes(g1)),
+#                         color = sample(c('purple', 'yellow', 'black'), nNodes(g1), replace=T),
+#                         row.names = nodeId(g1, "internal"))
+# nodeData(g2) <- rNodeData
+# ggtree(g2, aes(color=I(color)))
+
+# g1 = as(tn, 'phylo4')
+# collz<-as.data.frame(globalPalette.ch)
+# collz$state<-rownames(collz)
+# d = left_join(meta[,c("tip.label","state")], collz,by="state")
+# rownames(d) = tn$tip.label
+# g2 = phylo4d(g1, d)
+# rNodeData <- data.frame(randomTrait = rnorm(nNodes(g1)),
+#                         color = "grey70",
+#                         row.names = nodeId(g1, "internal"))
+# nodeData(g2) <- rNodeData
+# tre1<-ggtree(g2, aes(color=I(color)))
+# ggsave(tre1,"coloredtree.png")
+# tre1
+
+#smaller version of tree and meta to optimize tree code
+
+sm.tn<-keep.tip(tn,tip = sample(tn$tip.label,size=100))
+sm.met<-meta[match(sm.tn$tip.label,meta$tip.label),]
+
+g1 = as(sm.tn, 'phylo4')
+collz<-as.data.frame(globalPalette.ch)
+collz$state<-rownames(collz)
+colnames(collz)<-c("color","state")
+d = left_join(sm.met[,c("tip.label","state")], collz,by="state")
+rownames(d) = sm.tn$tip.label
+g2 = phylo4d(g1, d)
+rNodeData <- data.frame(randomTrait = rnorm(nNodes(g1)),
+                        color = "grey70",row.names = nodeId(g1, "internal"))
+nodeData(g2) <- rNodeData
+ggtree(g2, aes(color=I(color)))
+
+
+
+
+
+
+
+
+
+
+###OLD
+
+## Add in the lineage information as an annotation on the right side
+
+#import a tsv of name and hex color 
+linPalette<-read.table(lin.colors.in,sep="\t")
+
+#do these colors only represent the lineages present in Canada?
+
+## make color scheme for Lineages
+lin.colz<-row.names(linPalette)
+linPalette.ch<-as.character(linPalette$mycolz)
+names(linPalette.ch)<-lin.colz
+
+# colLinScale<-scale_colour_manual(name = "Canadian\nprovince",values = linPalette.ch)
+fillLinScale<-scale_fill_manual(name = "Lineage",values = linPalette.ch,na.translate = F)
+colLinScale<-scale_color_manual(name = "Lineage",values = linPalette.ch,na.translate = F)
+
+t.df2<-meta[,c("new.names","country","division","Lineage")]
+colnames(t.df2)<-c("tip.label","country","division","Lineage")
+
+#make a column for canada yes or no
+t.df2$canada<-0
+t.df2$province<-NA
+
+for (i in 1:nrow(t.df2)){
+  if (t.df2$country[i]=="Canada") {t.df2$canada[i]<-1; t.df2$province[i]<-t.df2$division[i] }
+}
+
+#change missing lineage (why?) to NA
+for(i in 1:nrow(t.df2)){
+  if(is.na(t.df2$Lineage[i]=="")) next
+  if(t.df2$Lineage[i]=="") t.df2$Lineage[i]<-NA
+}
+
+#add lineage annotation layer
+t.df3<-t.df2
+rownames(t.df3)<-t.df3$tip.label
+t.df3<-t.df3[,'Lineage',drop=FALSE]
+
+plin<-gheatmap(p5, t.df3, offset = 0.01, color=NULL, width=0.03,
+         colnames_position="top",colnames_offset_y=710) +
+  scale_fill_manual(values=linPalette.ch, guide=FALSE,na.translate = F)
+
+plin2<- plin + 
+  scale_y_continuous(expand=c(0.01,0)) +
+  scale_x_date(date_breaks = "1 month", date_labels = "%b %Y", limits=as.Date(c("2019-11-10","2021-03-07")), expand=c(0,0))+
+  theme(axis.text.x=element_text(angle=40,hjust = 1,size=10),
+        legend.text=element_text(size=10), 
+        legend.key.height=unit(.2, "in"),
+        legend.key.width=unit(.1, "in"), 
+        axis.title.x = element_text(size=12))+
+  guides(colour = guide_legend(override.aes = list(size=4),title.position="top", title="Province"))+
+  theme(plot.margin=unit(c(1.3,0,0,0),"cm"),
+        legend.position=c(0.35,0.98), legend.direction = "horizontal", legend.justification = "bottom")
+
+plin2
+ggsave(paste(fold.out,"/timetree_tmrca_prov_lins.png",sep=""),width=8,height=10,units="in")
+
+
+
+## collapse nodes with no Can desc - not working well
+
+#identify nodes with no canadian desc (if nested take furthest back)
+
+nodez<-(Ntip(tn)+1):(tn$Nnode + Ntip(tn))
+nd.c<-data.frame(node=nodez,desc.nodes=NA, desc.tips=NA, can=NA)
+for (i in 1:nrow(nd.c)){
+  nd<-nodez[i]
+  #desc tips and their labels
+  dsc<-unlist(Descendants(tn,node=nd,type="tips"))
+  dsc.tips<-tn$tip.label[dsc]
+  #internal node children
+  dsc.ndz<-Descendants(tn,node=nd,type="all")
+  #are any tips canadian?
+  if (any(str_detect(dsc.tips, "Canada"))){nd.c$can[i]<-"Yes"; next}
+  #if no Canadian desc tips  then:
+  nd.c$desc.nodes[i]<-paste0(as.character(dsc.ndz),collapse="|")
+  nd.c$desc.tips[i]<-paste0(as.character(dsc.tips),collapse="|")
+}
+
+#remove rows where Canada=yes
+nd.c<-nd.c[-which(nd.c$can=="Yes"),]
+nrow(nd.c)
+
+#now go through and remove if nested in another node
+nd.c[20,]
+#make a list of unique desc nodes within any rows
+unq.desc<-c()
+for (i in 1:nrow(nd.c)){
+  ds<-unlist(strsplit(nd.c$desc.nodes[i],split="\\|"))
+  unq.desc<-c(unq.desc,ds)
+}
+unq.desc<-unique(unq.desc)
+rem<-which(nd.c$node %in% unq.desc)
+nd.cr<-nd.c[-rem,]
+nrow(nd.cr)
+
+#collapse nodes with no Canadian descendants into grey triangles with size proportional to number desc
+p1<-ggtree(tn,mrsd=mrsd, as.Date=TRUE, aes(na.rm=T),lwd=0.05)+
+#p1<-ggtree(tn,mrsd=mrsd, as.Date=TRUE, aes(na.rm=T,color=group),lwd=0.05)+
+  theme_tree2() +#add scale bar on x axis
+  theme(axis.text=element_text(size=18))
+
+## timetree root date annotate
+p2<-p1+
+  geom_rootpoint(color="deepskyblue4", size=4, shape=18)+
+  annotate("text", as.Date("2019-11-15"), 5700, hjust=0, size=3, label=paste("tMRCA\n",tmrca.dt,"\n(",tmrca.dt.up," -\n",tmrca.dt.low,")", sep=""),fontface="bold")+
+  geom_point(data=point, aes(x=x,y=y),color="deepskyblue4", size=4, shape=18)
+
+#merge metadata with tree 
+p3<- p2 %<+% t.df [,c("tip.label","canada","province")]
+
+# too much memory
+# for (i in 1:nrow(nd.c)){
+#   p3<-collapse(p3, nd.c$node[i], 'max',color="grey30") 
+# }
+
+collapse(p3, nd.c$node[1], 'max',color="grey30") %>%
+collapse(nd.c$node[2], 'max',color="grey30") 
+
+## color provinces
+colScale<-scale_colour_manual(name = "Canadian\nprovince",values = provPalette, labels=names(table(t.df$province)))
+
+p5<-p3+
+  geom_tippoint(aes(color=as.factor(province),size=as.factor(canada)), shape=16, na.rm = TRUE)+
+  colScale+
+  scale_size_manual(values = c(-1,1),guide=FALSE)+
+  theme(legend.text=element_text(size=12),
+        legend.title = element_text(face="bold"),
+        legend.position = "top")+
+  guides(color=guide_legend(override.aes = list(size=6)))
+
+#color branches with ancestral state either 1) use the ace output directly, 2) color edges by node state in front of each edge
+#no more tip points
+
+
+
+#adding a trait to the phylo treeobject, join by node
+anole.tree<-read.tree("http://www.phytools.org/eqg2015/data/anole.tre")
+svl <- read.csv("http://www.phytools.org/eqg2015/data/svl.csv",
+    row.names=1)
+svl <- as.matrix(svl)[,1]
+fit <- phytools::fastAnc(anole.tree,svl,vars=TRUE,CI=TRUE)
+
+td <- data.frame(node = nodeid(anole.tree, names(svl)),
+               trait = svl)
+nd <- data.frame(node = names(fit$ace), trait = fit$ace)
+
+d <- rbind(td, nd)
+d$node <- as.numeric(d$node)
+tree <- full_join(anole.tree, d, by = 'node')
+
+p1 <- ggtree(tree, aes(color=trait), layout = 'circular', 
+        ladderize = FALSE, continuous = TRUE, size=2) +
+    scale_color_gradientn(colours=c("red", 'orange', 'green', 'cyan', 'blue')) +
+    geom_tiplab(hjust = -.1) + 
+    xlim(0, 1.2) + 
+    theme(legend.position = c(.05, .85)) 
+
+anc.df.b1<-read.csv(file = "../../../03b_MLstate_timetree/DF/anc.df.b1.csv")
+anc.df.b1.r<-anc.df.b1[,c("node","node.state")]
+library(dplyr)
+anc.df.b1$node %in% tn$node
+tn2 <- tidytree::full_join(tn, anc.df.b1.r, by = 'node')
+pp <- ggtree(tn2, aes(color=node.state),
+        ladderize = FALSE, continuous = TRUE, size=2) +
+    colScale+
+    geom_tiplab(hjust = -.1)+
+  theme(legend.position="none")
+pp
+
+

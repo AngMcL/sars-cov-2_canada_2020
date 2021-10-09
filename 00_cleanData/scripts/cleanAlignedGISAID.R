@@ -1,0 +1,309 @@
+#!/usr/bin/env Rscript
+
+# objective
+# clean an aligned fasta
+# usage:
+# Rscript cleanAlignedGISAID.R <input_seq.fasta> <input_meta.tsv>
+# Rscript cleanAlignedGISAID.R aligned/fake.fasta.aln GISAID/fake_meta.tsv
+
+# note that the metadata format provided by GISAID has changed since 2021-02 when this fakedata was generated and when the original data for analysis was downloaded
+# 'strain' column is now 'Virus_name' with changed format; 
+# 'date' is now 'Collection_date'; 
+# 'date_submitted' is now 'Submission.date'; 
+# 'gisaid_epi_isl' is now 'gisaid_epi_isl'; 
+# 'country' is now in a composite 'Location' with region and division; etc
+
+## Load libraries
+library(ape)
+library(stringr)
+library(stringi)
+library(Biostrings)
+library(gtools)
+library(dplyr)
+library(tidyr)
+library(plyr)
+
+#### Inputs and outputs here ####
+#TODAY's DATE
+today<-Sys.Date()
+
+# inputs
+args<-commandArgs(trailingOnly=TRUE)
+seq.in<-args[1]
+meta.in<-args[2]
+
+#manual run
+#setwd("~/Desktop/git_local/sarscov2_canada_2020/00_cleanData")
+#seq.in<- "aligned/fake.fasta.aln"
+#meta.in<- "GISAID/fake_meta.tsv"
+
+#outputs
+if(!dir.exists("cleaned")) {dir.create("cleaned")}
+seq.base<- paste0(unlist(str_split(unlist(str_split(seq.in,"/"))[[2]],"\\."))[[1]],collapse=".")
+seq.out<- paste("cleaned/clean_",seq.base,".fasta",sep="")
+meta.base<- paste0(unlist(str_split(unlist(str_split(meta.in,"/"))[[2]],"\\."))[[1]],collapse=".")
+meta.out<- paste("cleaned/clean_",meta.base,".csv",sep="")
+
+#### Curate and clean sequences ####
+## Read in the GISAID metadata
+meta<-read.table(file = meta.in, sep = '\t', header = TRUE,fill = TRUE,quote = "")
+
+#what is the most recent data date?
+data.date<-last(sort(meta$date))
+
+## Read alignment
+file.seqs<-readDNAStringSet(seq.in)
+#remove the ref from alignment
+file.seqs<-file.seqs[-1]
+file.names<-names(file.seqs)
+
+#size of alignment 
+l.og<-length(file.seqs)
+l.can<-length(str_which(names(file.seqs), "Canada"))
+
+#### SEQUENCE QUALITY EXCLUSIONS ####
+
+# Quantify the actg,n,- content and exclude low quality sequences
+#summarize the content of each sequence
+seq.summary<-data.frame(alphabetFrequency(file.seqs))
+seq.summary$length<-29903
+colnames(seq.summary)[16:18]<-c("-","+",".")
+seq.summary<-seq.summary %>% mutate(
+  AMBIG = M+R+W+S+Y+K+V+H+D+B,
+  a=A/length,
+  c=C/length,
+  t=T/length,
+  g=G/length,
+  n=N/length,
+  ambig=AMBIG/length,
+  gap=`-`/length)
+
+#Identify sequences with >10% gaps or >20% n >10% ambig
+bad.gaps<-which(seq.summary$gap>0.10) #removes sequences with <26912.7 b
+bad.n<-which(seq.summary$n>0.20) #had to bump this up to include the BC sequences...
+bad.ambig<-which(seq.summary$ambig>0.10)
+
+#how many? should match table
+l.bad.n<-length(bad.n)
+l.bad.gaps<-length(bad.gaps)
+l.bad.ambig<-length(bad.ambig)
+
+#l.bad.n; l.bad.gaps; l.bad.ambig
+
+#merge into one vector
+gaps.ns<-unique(c(bad.n,bad.gaps,bad.ambig))
+
+#REMOVE THEM from alignment
+if (length(gaps.ns)>0){
+  file.seqs<-file.seqs[-gaps.ns]
+}
+
+#### EXCLUSIONS not based on seq quality ####
+
+#read in the exclude table
+exc<-read.table("scripts/exclude.txt")
+exc<-exc[,1]
+
+#remove any sequences and names that match exc
+#don't expect any matches in the fake dataset
+excs<-which(file.names %in% exc)
+l.excs<-length(excs)
+if (l.excs>0){
+  file.names<-file.names[-excs]
+  file.seqs<-file.seqs[-excs]
+}
+
+# Remove sequences with duplicate names
+# different epi_isl, but no way to tell which is which is seqs
+dups<-which(duplicated(file.names))
+l.dups<-length(dups)
+if (l.dups>0){
+  file.names<-file.names[-dups]
+  file.seqs<-file.seqs[-dups]
+}
+length(unique(file.names))==length(file.names)
+
+#look for duplicates in the meta also
+dup.met<-which(duplicated(meta$strain))
+l.dup.met<-length(dup.met)
+if (l.dup.met>0){
+  meta<-meta[-dup.met,]
+}
+length(unique(meta$strain))==nrow(meta)
+
+## Connect sequences to metadata
+# look for discrepancies and replace manually (usually issue with the submission date not being in meta, but in seqname)
+mismatch<-file.names[which(!file.names %in% meta$strain)]
+if(length(mismatch)>0){
+  for (i in 1:length(mismatch)){
+    mis<-unlist(strsplit(mismatch[i],split="\\|"))[[1]]
+    matchy<-str_which(meta$strain, mis)
+    if(length(matchy>0)){ meta$strain[matchy]<-mismatch[i]}  
+  }
+}
+
+#check
+file.names[which(!file.names %in% meta$strain)]
+length(which(file.names %in% meta$strain))==length(file.names) #yes!
+
+# length(file.names)
+# length(file.seqs)
+# length(which(meta$strain %in% file.names))
+
+## Link the metadata and sequence data together
+file.names.df<-data.frame(file.names)
+colnames(file.names.df)<-"strain"
+
+#check class
+class(file.names.df$strain)==class(meta$strain)
+
+#match meta to file.names to restrict to those above
+meta.seq<-left_join(file.names.df,meta,by="strain")
+nrow(meta.seq)==length(file.names)
+
+## Remove additional outliers, non-human host, environmental
+#outliers due to sequencing errors or temporal signal discordance identified elsewhere
+#see http://virological.org/t/phylodynamic-analysis-176-genomes-6-mar-2020/356/10
+outliers<- c("EPI_ISL_406592", "EPI_ISL_406595")
+outs<-which(meta.seq$gisaid_epi_isl %in% outliers)
+l.out<-length(outs)
+#join these in a running list of exclude that we will exclude based on meta after linking below
+exclude<-outs
+
+## NON-HUMAN ##
+
+#see representation of different hosts
+# table(meta.seq$host)
+#seems most of these were removed by filters above, just 1 env left
+
+#rows to remove b/c not from humans
+nonhum<-which(meta.seq$Host!="Human")
+l.nonhum<-length(nonhum)
+
+#add to the exclude
+non.hum.id<-meta.seq$gisaid_epi_isl[nonhum]
+exclude<-unique(c(exclude,non.hum.id))
+
+## ENVIRONMENTAL ##
+env<-str_which(meta.seq$strain, "env")
+env2<-which(meta.seq$Host=="Environment")
+env<-unique(c(env,env2))
+l.env<-length(env)
+env.id<-meta.seq$gisaid_epi_isl[env]
+exclude<-unique(c(exclude,env.id))
+
+#make a wide single character separated by | for str_which to read properly
+exclude.wide<-paste(exclude,collapse="|")
+
+#remove these all at the same time
+if(length(exclude)>0){
+  meta.seq<-meta.seq[-str_which(meta.seq$gisaid_epi_isl,exclude.wide),]
+}
+
+## Rename with no weird chars
+
+## Parse the names and rename with no weird characters
+#note that this is specific to the nextstrain seequence data filenames
+#name as:
+#Strain/GISAID_ID/Date
+meta.seq<-meta.seq %>% unite("new.names", c(strain, gisaid_epi_isl, date), sep = "/", remove=FALSE)
+#get rid of any whitespace
+meta.seq$new.names<-str_replace_all(meta.seq$new.names, fixed(" "), "")
+#get rid of any special charactres
+if(length(str_which(meta.seq$new.names,pattern=paste0(c("é","ê","è","ë","ç"),collapse="//|")))>0){
+  meta.seq$new.names<-stri_trans_general(str = meta.seq$new.names, 
+                                         id = "Latin-ASCII")}
+#change these "-XX" to blanks
+meta.seq$date<-str_replace_all(meta.seq$date,"-XX","")
+# new.meta$date<-str_replace_all(new.meta$date,"-XX","")
+
+## ONLY keep incomplete dates from Canada and infer using LSD
+#occurences with incomplete dates...grr
+weird<-c()
+for (i in 1:nrow(meta.seq)){
+  if(length(unlist(strsplit(meta.seq$date[i],split="")))<10) {weird<-c(weird,i); next} #if less than 10 characters (including -), incomplete
+}
+l.weird<-length(weird)
+
+#how many of these are canadian
+l.weird.can<-length(str_which(meta.seq$country[weird],"Canada"))
+
+## IN THIS VERSION keep ONLY CANADIAN incomplete dates ##
+
+#remove Canadian sequences from the weird vector
+weird.remove<-c()
+for (i in 1:nrow(meta.seq)){
+  if(length(unlist(strsplit(meta.seq$date[i],split="")))<10 & 
+     !str_detect(meta.seq$country[i],"Canada")) 
+  {weird.remove<-c(weird.remove,i); next}
+}
+
+#check
+length(weird.remove) == length(weird) - l.weird.can
+
+# RUN THIS TO REMOVE sequences and meta with incomplete date from non-Canadian 
+if(length(weird.remove)>0){
+  meta.seq<-meta.seq[-weird.remove,]
+}
+
+#reduce file.names to match meta.seq
+still.here<-which(file.names %in% meta.seq$strain)
+all(meta.seq$strain %in% file.names)
+length(still.here)==nrow(meta.seq)
+
+# length(still.here)==nrow(meta.seq) #check
+file.names<-file.names[still.here]
+file.seqs<-file.seqs[still.here] #seqs are ordered the same as names
+length(file.names)==length(file.seqs)
+nrow(meta.seq)==length(file.names)
+
+#### replace the file.names with the new.names ####
+#double check order the same
+all(file.names==meta.seq$strain)
+#replace with new names
+file.names<-meta.seq$new.names
+#should be the same
+length(file.names)==length(unique(file.names))
+
+## Merge file names and sequences back together to export
+l.final<-length(file.names)
+l.final.can<-length(str_which(file.names, "Canada"))
+# names(file.seqs)<-file.names
+
+# replace file names 
+names(file.seqs)<-file.names 
+
+## Export alignment and metadata
+# writeXStringSet(file.seqs,seq.out, format="fasta")
+# write.csv(meta.seq,file=meta.out)
+
+# if (!file.exists(seq.out)){ #to avoid overwrite
+writeXStringSet(file.seqs,file=seq.out, format="fasta")
+write.csv(meta.seq,file=meta.out)
+# }
+
+
+#print summary statistics of the cleaning run to a csv file
+excl.summary.out<-str_replace_all(meta.out, "meta","ExclSummary")
+out.colz<-c("n.seq.in","n.seq.can.in","n.badn","n.badgaps","n.ambig","n.gapns",
+            "nextstrain.exclude","n.duplicates","n.tempoutliers",
+            "n.nonhuman","n.environmental","n.incompletedate","n.incompletedate.can",
+            "n.seq.out","n.seq.can.out")
+valuez<-c(l.og, #original length
+          l.can, #original number from Canada
+          l.bad.n, #>10% n
+          l.bad.gaps, #>10% gaps
+          l.bad.ambig, #>10% ambig
+          length(gaps.ns), #all three above
+          l.excs, #nextstrain exclude
+          l.dups, #duplicate names
+          l.out, #temporal outliers
+          l.nonhum, #non human host
+          l.env, #environmental
+          length(weird), #incomplete dates, not Canada
+          l.weird.can, #incomplete canadian dates
+          l.final, #final number of sequences
+          l.final.can #final number of Can sequences
+)
+summary.statz<-data.frame(parameter=out.colz,value=valuez)
+write.csv(summary.statz,file=excl.summary.out,row.names = F)

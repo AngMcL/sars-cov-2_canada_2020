@@ -1,0 +1,16 @@
+"parameter","value"
+"n.seq.in",201
+"n.seq.can.in",100
+"n.badn",0
+"n.badgaps",0
+"n.ambig",0
+"n.gapns",0
+"nextstrain.exclude",0
+"n.duplicates",0
+"n.tempoutliers",0
+"n.nonhuman",0
+"n.environmental",0
+"n.incompletedate",12
+"n.incompletedate.can",5
+"n.seq.out",194
+"n.seq.can.out",100

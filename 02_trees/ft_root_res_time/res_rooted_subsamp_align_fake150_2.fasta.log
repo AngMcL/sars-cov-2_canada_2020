@@ -1,0 +1,310 @@
+IQ-TREE multicore version 2.1.2 COVID-edition for Linux 64-bit built Oct 22 2020
+Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    babygroot (AVX2, FMA3, 125 GB RAM)
+Command: /usr/bin/iqtree-2.1.2-Linux/bin/iqtree2 -s res_rooted_subsamp_align_fake150_2.fasta --date dates_res_rooted_subsamp_align_fake150_2.txt -te res_rooted_subsamp_align_fake150_2.tre --dating LSD --clock-sd 0.2 -nt AUTO -m GTR+I+R3 --date-ci 100 -o China/fake_1/2020/EPI_ISL_FAKE_1/2019-12-26
+Seed:    301697 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Fri Oct  8 17:02:14 2021
+Kernel:  AVX+FMA - auto-detect threads (64 CPU cores detected)
+
+Reading alignment file res_rooted_subsamp_align_fake150_2.fasta ... Fasta format detected
+Alignment most likely contains DNA/RNA sequences
+WARNING: 261 sites contain only gaps or ambiguous characters.
+Alignment has 142 sequences with 29903 columns, 746 distinct patterns
+341 parsimony-informative, 568 singleton sites, 28994 constant sites
+                                                         Gap/Ambiguity  Composition  p-value
+   1  Portugal/fake_94/2021/EPI_ISL_FAKE_94/2021-01-13           0.87%    passed     99.99%
+   2  Canada/fake_169/2021/EPI_ISL_FAKE_169/2021-02-07           0.87%    passed    100.00%
+   3  Canada/fake_146/2021/EPI_ISL_FAKE_146/2021-02-01           0.87%    passed    100.00%
+   4  Canada/fake_53/2020/EPI_ISL_FAKE_53/2020-12-14             0.87%    passed    100.00%
+   5  Canada/fake_127/2021/EPI_ISL_FAKE_127/2021-01-25           0.87%    passed     99.97%
+   6  USA/fake_181/2021/EPI_ISL_FAKE_181/2021-02-10              0.87%    passed     99.97%
+   7  Canada/fake_48/2020/EPI_ISL_FAKE_48/2020-12-12             0.87%    passed    100.00%
+   8  Portugal/fake_47/2020/EPI_ISL_FAKE_47/2020-12-12           0.87%    passed    100.00%
+   9  Canada/fake_115/2021/EPI_ISL_FAKE_115/2021-01-22           0.87%    passed    100.00%
+  10  Canada/fake_67/2020/EPI_ISL_FAKE_67/2020-12-26             0.87%    passed    100.00%
+  11  Canada/fake_164/2021/EPI_ISL_FAKE_164/2021-02-06           0.87%    passed    100.00%
+  12  Canada/fake_167/2021/EPI_ISL_FAKE_167/2021-02-06           0.87%    passed     99.99%
+  13  Canada/fake_84/2021/EPI_ISL_FAKE_84/2021-01-07             0.87%    passed    100.00%
+  14  Canada/fake_4/2020/EPI_ISL_FAKE_4/2020-08-01               0.87%    passed    100.00%
+  15  Canada/fake_3/2020/EPI_ISL_FAKE_3/2020-07-13               0.87%    passed    100.00%
+  16  UnitedKingdom/fake_7/2020/EPI_ISL_FAKE_7/2020-08-13        0.87%    passed    100.00%
+  17  Canada/fake_83/2021/EPI_ISL_FAKE_83/2021-01-07             0.87%    passed    100.00%
+  18  Canada/fake_87/2021/EPI_ISL_FAKE_87/2021-01-08             0.87%    passed    100.00%
+  19  Spain/fake_112/2021/EPI_ISL_FAKE_112/2021-01-21            0.87%    passed     99.99%
+  20  Canada/fake_57/2020/EPI_ISL_FAKE_57/2020-12-17             0.87%    passed    100.00%
+  21  Canada/fake_166/2021/EPI_ISL_FAKE_166/2021-02-06           0.87%    passed     99.97%
+  22  USA/fake_15/2020/EPI_ISL_FAKE_15/2020-10-13                0.87%    passed     99.99%
+  23  Canada/fake_16/2020/EPI_ISL_FAKE_16/2020-10-14             0.87%    passed     99.99%
+  24  USA/fake_51/2020/EPI_ISL_FAKE_51/2020-12-13                0.87%    passed     99.98%
+  25  Canada/fake_50/2020/EPI_ISL_FAKE_50/2020-12-12             0.87%    passed     99.99%
+  26  Canada/fake_38/2020/EPI_ISL_FAKE_38/2020-11-28             0.87%    passed    100.00%
+  27  Canada/fake_128/2021/EPI_ISL_FAKE_128/2021-01-25           0.87%    passed    100.00%
+  28  Canada/fake_21/2020/EPI_ISL_FAKE_21/2020-10-26             0.87%    passed    100.00%
+  29  Canada/fake_106/2021/EPI_ISL_FAKE_106/2021-01-17           0.87%    passed    100.00%
+  30  Canada/fake_174/2021/EPI_ISL_FAKE_174/2021-02-08           0.87%    passed    100.00%
+  31  UnitedKingdom/fake_137/2021/EPI_ISL_FAKE_137/2021-01-29    0.87%    passed     99.98%
+  32  Canada/fake_55/2020/EPI_ISL_FAKE_55/2020-12-14             0.87%    passed    100.00%
+  33  UnitedKingdom/fake_22/2020/EPI_ISL_FAKE_22/2020-10-26      0.87%    passed    100.00%
+  34  USA/fake_69/2020/EPI_ISL_FAKE_69/2020-12-27                0.87%    passed    100.00%
+  35  Canada/fake_32/2020/EPI_ISL_FAKE_32/2020-11-16             0.87%    passed    100.00%
+  36  UnitedKingdom/fake_193/2021/EPI_ISL_FAKE_193/2021-02-15    0.87%    passed    100.00%
+  37  France/fake_195/2021/EPI_ISL_FAKE_195/2021-02-16           0.87%    passed     99.99%
+  38  Spain/fake_9/2020/EPI_ISL_FAKE_9/2020-09-06                0.87%    passed    100.00%
+  39  UnitedKingdom/fake_70/2020/EPI_ISL_FAKE_70/2020-12-27      0.87%    passed     99.99%
+  40  Canada/fake_8/2020/EPI_ISL_FAKE_8/2020-08-20               0.87%    passed    100.00%
+  41  UnitedKingdom/fake_23/2020/EPI_ISL_FAKE_23/2020-10-27      0.87%    passed    100.00%
+  42  Canada/fake_79/2021/EPI_ISL_FAKE_79/2021-01-05             0.87%    passed     99.99%
+  43  Canada/fake_91/2021/EPI_ISL_FAKE_91/2021-01-10             0.87%    passed    100.00%
+  44  Canada/fake_101/2021/EPI_ISL_FAKE_101/2021-01-16           0.87%    passed    100.00%
+  45  Canada/fake_49/2020/EPI_ISL_FAKE_49/2020-12-12             0.87%    passed    100.00%
+  46  Canada/fake_161/2021/EPI_ISL_FAKE_161/2021-02-05           0.87%    passed     99.99%
+  47  Canada/fake_66/2020/EPI_ISL_FAKE_66/2020-12-24             0.87%    passed    100.00%
+  48  USA/fake_113/2021/EPI_ISL_FAKE_113/2021-01-21              0.87%    passed    100.00%
+  49  Canada/fake_27/2020/EPI_ISL_FAKE_27/2020-11-05             0.87%    passed    100.00%
+  50  UnitedKingdom/fake_36/2020/EPI_ISL_FAKE_36/2020-11-24      0.87%    passed     99.99%
+  51  Canada/fake_82/2021/EPI_ISL_FAKE_82/2021-01-05             0.87%    passed     99.99%
+  52  Canada/fake_173/2021/EPI_ISL_FAKE_173/2021-02-08           0.87%    passed     99.99%
+  53  Canada/fake_191/2021/EPI_ISL_FAKE_191/2021-02-13           0.87%    passed     99.99%
+  54  USA/fake_35/2020/EPI_ISL_FAKE_35/2020-11-23                0.87%    passed    100.00%
+  55  Canada/fake_44/2020/EPI_ISL_FAKE_44/2020-12-05             0.87%    passed    100.00%
+  56  Canada/fake_68/2020/EPI_ISL_FAKE_68/2020-12-26             0.87%    passed    100.00%
+  57  Canada/fake_63/2020/EPI_ISL_FAKE_63/2020-12-24             0.87%    passed    100.00%
+  58  UnitedKingdom/fake_121/2021/EPI_ISL_FAKE_121/2021-01-23    0.87%    passed    100.00%
+  59  Thailand/fake_14/2020/EPI_ISL_FAKE_14/2020-10-13           0.87%    passed    100.00%
+  60  USA/fake_99/2021/EPI_ISL_FAKE_99/2021-01-15                0.87%    passed     99.99%
+  61  Canada/fake_76/2021/EPI_ISL_FAKE_76/2021-01-03             0.87%    passed     99.97%
+  62  Netherlands/fake_40/2020/EPI_ISL_FAKE_40/2020-11-29        0.87%    passed     99.99%
+  63  Canada/fake_148/2021/EPI_ISL_FAKE_148/2021-02-02           0.87%    passed    100.00%
+  64  Canada/fake_86/2021/EPI_ISL_FAKE_86/2021-01-08             0.87%    passed     99.99%
+  65  Canada/fake_175/2021/EPI_ISL_FAKE_175/2021-02-09           0.87%    passed     99.98%
+  66  France/fake_54/2020/EPI_ISL_FAKE_54/2020-12-14             0.87%    passed     99.99%
+  67  USA/fake_118/2021/EPI_ISL_FAKE_118/2021-01-23              0.87%    passed     99.99%
+  68  USA/fake_192/2021/EPI_ISL_FAKE_192/2021-02-13              0.87%    passed    100.00%
+  69  USA/fake_24/2020/EPI_ISL_FAKE_24/2020-10-30                0.87%    passed    100.00%
+  70  Russia/fake_129/2021/EPI_ISL_FAKE_129/2021-01-26           0.87%    passed     99.99%
+  71  Canada/fake_134/2021/EPI_ISL_FAKE_134/2021-01-27           0.87%    passed    100.00%
+  72  Canada/fake_42/2020/EPI_ISL_FAKE_42/2020-12-01             0.87%    passed     99.98%
+  73  Canada/fake_80/2021/EPI_ISL_FAKE_80/2021-01-05             0.87%    passed     99.98%
+  74  Canada/fake_33/2020/EPI_ISL_FAKE_33/2020-11-19             0.87%    passed    100.00%
+  75  Canada/fake_171/2021/EPI_ISL_FAKE_171/2021-02-08           0.87%    passed    100.00%
+  76  Canada/fake_97/2021/EPI_ISL_FAKE_97/2021-01-14             0.87%    passed    100.00%
+  77  Canada/fake_100/2021/EPI_ISL_FAKE_100/2021-01-16           0.87%    passed    100.00%
+  78  Canada/fake_72/2020/EPI_ISL_FAKE_72/2020-12-29             0.87%    passed    100.00%
+  79  Canada/fake_77/2021/EPI_ISL_FAKE_77/2021-01-03             0.87%    passed    100.00%
+  80  Canada/fake_58/2020/EPI_ISL_FAKE_58/2020-12-18             0.87%    passed    100.00%
+  81  UnitedKingdom/fake_71/2020/EPI_ISL_FAKE_71/2020-12-27      0.87%    passed     99.99%
+  82  Canada/fake_5/2020/EPI_ISL_FAKE_5/2020-08-01               0.87%    passed    100.00%
+  83  Canada/fake_6/2020/EPI_ISL_FAKE_6/2020-08-03               0.87%    passed    100.00%
+  84  Canada/fake_163/2021/EPI_ISL_FAKE_163/2021-02-05           0.87%    passed     99.95%
+  85  Canada/fake_75/2021/EPI_ISL_FAKE_75/2021-01                0.87%    passed     99.98%
+  86  Canada/fake_46/2020/EPI_ISL_FAKE_46/2020-12-09             0.87%    passed     99.98%
+  87  UnitedKingdom/fake_156/2021/EPI_ISL_FAKE_156/2021-02-02    0.87%    passed     99.96%
+  88  Canada/fake_109/2021/EPI_ISL_FAKE_109/2021-01-19           0.87%    passed    100.00%
+  89  Canada/fake_172/2021/EPI_ISL_FAKE_172/2021-02-08           0.87%    passed    100.00%
+  90  Canada/fake_56/2020/EPI_ISL_FAKE_56/2020-12-15             0.87%    passed    100.00%
+  91  Canada/fake_85/2021/EPI_ISL_FAKE_85/2021-01-08             0.87%    passed    100.00%
+  92  Canada/fake_37/2020/EPI_ISL_FAKE_37/2020-11-24             0.87%    passed     99.98%
+  93  USA/fake_103/2021/EPI_ISL_FAKE_103/2021-01-17              0.87%    passed    100.00%
+  94  USA/fake_178/2021/EPI_ISL_FAKE_178/2021-02-09              0.87%    passed     99.99%
+  95  Canada/fake_93/2021/EPI_ISL_FAKE_93/2021-01-10             0.87%    passed    100.00%
+  96  France/fake_184/2021/EPI_ISL_FAKE_184/2021-02-12           0.87%    passed    100.00%
+  97  Canada/fake_73/2020/EPI_ISL_FAKE_73/2020-12                0.87%    passed    100.00%
+  98  Canada/fake_114/2021/EPI_ISL_FAKE_114/2021-01              0.87%    passed     99.99%
+  99  Canada/fake_45/2020/EPI_ISL_FAKE_45/2020-12-07             0.87%    passed     99.99%
+ 100  Canada/fake_74/2021/EPI_ISL_FAKE_74/2021-01-02             0.87%    passed    100.00%
+ 101  USA/fake_144/2021/EPI_ISL_FAKE_144/2021-01-30              0.87%    passed    100.00%
+ 102  Canada/fake_12/2020/EPI_ISL_FAKE_12/2020-10-05             0.87%    passed    100.00%
+ 103  Canada/fake_117/2021/EPI_ISL_FAKE_117/2021-01-22           0.87%    passed     99.99%
+ 104  Canada/fake_61/2020/EPI_ISL_FAKE_61/2020-12-19             0.87%    passed    100.00%
+ 105  Canada/fake_147/2021/EPI_ISL_FAKE_147/2021-02-01           0.87%    passed     99.99%
+ 106  Canada/fake_64/2020/EPI_ISL_FAKE_64/2020-12-24             0.87%    passed     99.99%
+ 107  Canada/fake_25/2020/EPI_ISL_FAKE_25/2020-10-30             0.87%    passed    100.00%
+ 108  Canada/fake_162/2021/EPI_ISL_FAKE_162/2021-02-05           0.87%    passed     99.99%
+ 109  UnitedKingdom/fake_2/2020/EPI_ISL_FAKE_2/2020-07-02        0.87%    passed    100.00%
+ 110  UnitedKingdom/fake_145/2021/EPI_ISL_FAKE_145/2021-01-31    0.87%    passed    100.00%
+ 111  USA/fake_197/2021/EPI_ISL_FAKE_197/2021-02-17              0.87%    passed     99.98%
+ 112  UnitedKingdom/fake_34/2020/EPI_ISL_FAKE_34/2020-11-20      0.87%    passed     99.99%
+ 113  France/fake_120/2021/EPI_ISL_FAKE_120/2021-01-23           0.87%    passed     99.99%
+ 114  Canada/fake_126/2021/EPI_ISL_FAKE_126/2021-01-25           0.87%    passed    100.00%
+ 115  Canada/fake_52/2020/EPI_ISL_FAKE_52/2020-12-13             0.87%    passed    100.00%
+ 116  Canada/fake_41/2020/EPI_ISL_FAKE_41/2020-11-29             0.87%    passed    100.00%
+ 117  Canada/fake_60/2020/EPI_ISL_FAKE_60/2020-12-18             0.87%    passed    100.00%
+ 118  Canada/fake_39/2020/EPI_ISL_FAKE_39/2020-11-28             0.87%    passed    100.00%
+ 119  Denmark/fake_201/2021/EPI_ISL_FAKE_201/2021-02-18          0.87%    passed    100.00%
+ 120  USA/fake_19/2020/EPI_ISL_FAKE_19/2020-10-18                0.87%    passed     99.99%
+ 121  Canada/fake_29/2020/EPI_ISL_FAKE_29/2020-11                0.87%    passed     99.99%
+ 122  USA/fake_92/2021/EPI_ISL_FAKE_92/2021-01-10                0.87%    passed    100.00%
+ 123  Canada/fake_160/2021/EPI_ISL_FAKE_160/2021-02-04           0.87%    passed    100.00%
+ 124  Canada/fake_81/2021/EPI_ISL_FAKE_81/2021-01-05             0.87%    passed     99.99%
+ 125  Canada/fake_28/2020/EPI_ISL_FAKE_28/2020-11-05             0.87%    passed    100.00%
+ 126  USA/fake_110/2021/EPI_ISL_FAKE_110/2021-01-19              0.87%    passed    100.00%
+ 127  Canada/fake_78/2021/EPI_ISL_FAKE_78/2021-01-04             0.87%    passed     99.98%
+ 128  Canada/fake_135/2021/EPI_ISL_FAKE_135/2021-01-28           0.87%    passed    100.00%
+ 129  Canada/fake_10/2020/EPI_ISL_FAKE_10/2020-10-01             0.87%    passed    100.00%
+ 130  USA/fake_17/2020/EPI_ISL_FAKE_17/2020-10-14                0.87%    passed     99.99%
+ 131  Canada/fake_26/2020/EPI_ISL_FAKE_26/2020-11-02             0.87%    passed     99.99%
+ 132  Denmark/fake_187/2021/EPI_ISL_FAKE_187/2021-02-12          0.87%    passed    100.00%
+ 133  Canada/fake_165/2021/EPI_ISL_FAKE_165/2021-02-06           0.87%    passed    100.00%
+ 134  Canada/fake_59/2020/EPI_ISL_FAKE_59/2020-12-18             0.87%    passed     99.99%
+ 135  Canada/fake_176/2021/EPI_ISL_FAKE_176/2021-02-09           0.87%    passed    100.00%
+ 136  Canada/fake_30/2020/EPI_ISL_FAKE_30/2020-11-12             0.87%    passed    100.00%
+ 137  Canada/fake_170/2021/EPI_ISL_FAKE_170/2021-02              0.87%    passed     99.98%
+ 138  UnitedKingdom/fake_190/2021/EPI_ISL_FAKE_190/2021-02-13    0.87%    passed     99.95%
+ 139  UnitedKingdom/fake_31/2020/EPI_ISL_FAKE_31/2020-11-13      0.87%    passed    100.00%
+ 140  Canada/fake_13/2020/EPI_ISL_FAKE_13/2020-10-10             0.87%    passed     99.99%
+ 141  Japan/fake_65/2020/EPI_ISL_FAKE_65/2020-12-24              0.87%    passed     99.99%
+ 142  China/fake_1/2020/EPI_ISL_FAKE_1/2019-12-26                0.87%    passed    100.00%
+****  TOTAL                                                      0.87%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: Canada/fake_6/2020/EPI_ISL_FAKE_6/2020-08-03 is identical to Canada/fake_5/2020/EPI_ISL_FAKE_5/2020-08-01 but kept for subsequent analysis
+Reading input tree file res_rooted_subsamp_align_fake150_2.tre ... rooted tree
+
+NOTE: 10 MB RAM (0 GB) is required!
+Measuring multi-threading efficiency up to 64 CPU cores
+Increase to 10 rounds for branch lengths
+1234 trees examined
+Threads: 1 / Time: 64.046 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -60378
+Threads: 2 / Time: 55.234 sec / Speedup: 1.160 / Efficiency: 58% / LogL: -60378
+Threads: 3 / Time: 55.420 sec / Speedup: 1.156 / Efficiency: 39% / LogL: -60378
+BEST NUMBER OF THREADS: 2
+
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -50293.789
+2. Current log-likelihood: -50158.382
+3. Current log-likelihood: -50156.631
+4. Current log-likelihood: -50155.277
+5. Current log-likelihood: -50154.214
+6. Current log-likelihood: -50153.372
+7. Current log-likelihood: -50152.693
+8. Current log-likelihood: -50152.139
+9. Current log-likelihood: -50151.676
+10. Current log-likelihood: -50151.286
+11. Current log-likelihood: -50150.957
+12. Current log-likelihood: -50150.677
+13. Current log-likelihood: -50150.437
+14. Current log-likelihood: -50150.231
+15. Current log-likelihood: -50150.053
+16. Current log-likelihood: -50149.899
+17. Current log-likelihood: -50149.765
+18. Current log-likelihood: -50149.650
+19. Current log-likelihood: -50149.549
+20. Current log-likelihood: -50149.460
+21. Current log-likelihood: -50149.383
+22. Current log-likelihood: -50149.316
+23. Current log-likelihood: -50149.256
+24. Current log-likelihood: -50149.203
+25. Current log-likelihood: -50149.156
+26. Current log-likelihood: -50149.115
+27. Current log-likelihood: -50149.077
+28. Current log-likelihood: -50149.043
+29. Current log-likelihood: -50149.013
+30. Current log-likelihood: -50148.985
+31. Current log-likelihood: -50148.959
+32. Current log-likelihood: -50148.935
+33. Current log-likelihood: -50148.913
+34. Current log-likelihood: -50148.892
+35. Current log-likelihood: -50148.873
+36. Current log-likelihood: -50148.854
+37. Current log-likelihood: -50148.837
+38. Current log-likelihood: -50148.820
+39. Current log-likelihood: -50148.804
+40. Current log-likelihood: -50148.788
+41. Current log-likelihood: -50148.773
+42. Current log-likelihood: -50148.759
+43. Current log-likelihood: -50148.744
+44. Current log-likelihood: -50148.731
+45. Current log-likelihood: -50148.717
+46. Current log-likelihood: -50148.703
+47. Current log-likelihood: -50148.690
+48. Current log-likelihood: -50148.677
+49. Current log-likelihood: -50148.664
+50. Current log-likelihood: -50148.652
+51. Current log-likelihood: -50148.639
+52. Current log-likelihood: -50148.626
+53. Current log-likelihood: -50148.614
+54. Current log-likelihood: -50148.601
+55. Current log-likelihood: -50148.589
+56. Current log-likelihood: -50148.576
+57. Current log-likelihood: -50148.565
+58. Current log-likelihood: -50148.552
+59. Current log-likelihood: -50148.541
+60. Current log-likelihood: -50148.529
+61. Current log-likelihood: -50148.517
+62. Current log-likelihood: -50148.505
+63. Current log-likelihood: -50148.494
+64. Current log-likelihood: -50148.482
+65. Current log-likelihood: -50148.471
+66. Current log-likelihood: -50148.459
+67. Current log-likelihood: -50148.448
+68. Current log-likelihood: -50148.437
+69. Current log-likelihood: -50148.426
+70. Current log-likelihood: -50148.415
+71. Current log-likelihood: -50148.404
+72. Current log-likelihood: -50148.393
+73. Current log-likelihood: -50148.382
+74. Current log-likelihood: -50148.371
+75. Current log-likelihood: -50148.360
+76. Current log-likelihood: -50148.350
+77. Current log-likelihood: -50148.339
+78. Current log-likelihood: -50148.328
+79. Current log-likelihood: -50148.318
+80. Current log-likelihood: -50148.308
+81. Current log-likelihood: -50148.297
+82. Current log-likelihood: -50148.287
+83. Current log-likelihood: -50148.277
+84. Current log-likelihood: -50148.266
+85. Current log-likelihood: -50148.256
+Optimal log-likelihood: -50148.246
+Rate parameters:  A-C: 0.94089  A-G: 0.78164  A-T: 0.81436  C-G: 1.22331  C-T: 0.93041  G-T: 1.00000
+Base frequencies:  A: 0.299  C: 0.184  G: 0.196  T: 0.321
+Proportion of invariable sites: 0.432
+Site proportion and rates:  (0.186,1.759) (0.191,1.760) (0.191,1.760)
+Parameters optimization took 85 rounds (9.470 sec)
+BEST SCORE FOUND : -50148.246
+Total tree length: 0.031
+
+Total number of iterations: 0
+CPU time used for tree search: 0.000 sec (0h:0m:0s)
+Wall-clock time used for tree search: 0.000 sec (0h:0m:0s)
+Total CPU time used: 368.434 sec (0h:6m:8s)
+Total wall-clock time used: 184.184 sec (0h:3m:4s)
+
+Analysis results written to: 
+  IQ-TREE report:                res_rooted_subsamp_align_fake150_2.fasta.iqtree
+  Maximum-likelihood tree:       res_rooted_subsamp_align_fake150_2.fasta.treefile
+  Screen log file:               res_rooted_subsamp_align_fake150_2.fasta.log
+
+--- Start phylogenetic dating ---
+Reading date file dates_res_rooted_subsamp_align_fake150_2.txt ...
+142 dates extracted
+Building time tree by least-square dating (LSD) with command:
+lsd -i res_rooted_subsamp_align_fake150_2.fasta.timetree.subst -s 29903 -o res_rooted_subsamp_align_fake150_2.fasta.timetree -f 100 -q 0.2 -g res_rooted_subsamp_align_fake150_2.fasta.timetree.outgroup -d res_rooted_subsamp_align_fake150_2.fasta.timetree.date 
+Reroot the tree(s) using given outgroups ...
+
+TREE 1
+*PROCESSING:
+Reading the tree ... 
+Collapse 37 (over 140) internal branches having branch length <= 1.67e-05
+ (settable via option -l)
+Parameter to adjust variances was set to 0.000334 (settable via option -b)
+Minimum branch length of time scaled tree (settable via option -u and -U): 0
+Estimating the root position on the branch defined by given outgroups ...
+Computing confidence intervals using sequence length 29903 and a lognormal
+ relaxed clock with mean 1, standard deviation 0.2 (settable via option -q)
+*WARNINGS:
+- 26.4286% internal branches were collapsed.
+*RESULTS:
+- Dating results:
+ rate 0.000693962, tMRCA 2019-12-26 , objective function 0.00097635
+- Results with confidence intervals:
+ rate 0.000693962 [0.000598116; 0.000785184], tMRCA 2019-12-26 [2019-12-02; 2019-12-26], objective function 0.00097635
+
+TOTAL ELAPSED TIME: 0.104 seconds
+LSD results written to:
+  LSD report:                  res_rooted_subsamp_align_fake150_2.fasta.timetree.lsd
+  Time tree in nexus format:   res_rooted_subsamp_align_fake150_2.fasta.timetree.nex
+  Time tree in newick format:  res_rooted_subsamp_align_fake150_2.fasta.timetree.nwk
+
+--- End phylogenetic dating ---
+Date and Time: Fri Oct  8 17:05:18 2021

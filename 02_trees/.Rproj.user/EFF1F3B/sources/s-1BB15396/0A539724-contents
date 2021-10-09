@@ -1,0 +1,98 @@
+## TaxaNameCheck
+
+library(ape)
+library(stringr)
+library(xts)
+library(gtools)
+
+## Read in the inferred dates from 0115_v2
+oldMet<-read.csv("../../../../20210115_v2_phylogeo/03b_MLstate_timetree/DF/20210115_metab1_InferredDatesLSD.csv")
+head(oldMet)
+
+
+## setup for boots
+#bootstraps to iterate over
+b<-10
+BOOTS<-1:10
+# length BOOTS 
+
+
+
+#set up folders if don't exist
+output<-"boots2_LSDin"
+if (!dir.exists(output)) {dir.create(output)}
+
+#source folder
+source.fold<-"../boots2_ft_rooted_res/"
+
+
+#go through all bootstraps
+i=1
+for (i in 1:b){  
+  t<-read.tree(paste(source.fold,"fasttree_inc_rooted_res",BOOTS[i],".tre",sep=""))
+  f<-read.FASTA(paste(source.fold,"fasttree_inc_rooted_res",BOOTS[i],".fasta",sep=""))
+
+  names(f)[str_which(names(f),"2019-")] #"China/2019-12-26/EPI_ISL_402125" #wuhan-hu-1 as outgroup
+  names(f)[str_which(names(f),"2020-01-05")] #A as alternative...
+  length(names(f))==length(t$tip.label)
+  all(names(f)==t$tip.label)
+  all(names(f) %in% t$tip.label)
+  
+  #okay so it's an order issue
+  #reorder the fasta to match tree
+  ff<-f[order(match(names(f), t$tip.label))]
+  all(names(ff)==t$tip.label)
+  
+  ## export a datefile from this tree
+  #extract tipnames
+  nm<-t$tip.label
+  
+  #parse the dates
+  dates<-data.frame(node_name=nm,date=NA)
+  for (j in 1:length(nm)){
+    dates$date[j]<-unlist(strsplit(nm[j],split="/"))[[2]]
+  }
+  
+  #Replace any "-XX" with no date
+  dates$date<-str_replace_all(dates$date,"-XX","")
+
+  
+  ### Pull in the previously inferred dates here ####
+  #incomplete dates
+  incomp<-c()
+  for (j in 1:nrow(dates)){
+    if(length(unlist(strsplit(dates$date[j],split="-")))<3) incomp<-c(incomp,dates$node_name[j])
+  }
+  length(incomp) 
+  
+  #match tip labels from incomp
+  match<-which(oldMet$tip.label %in% incomp)
+  length(match) #same length as all inferred in 0115, that is good
+  # oldMet[match,]
+  
+  #replace dates in the datefile that are incomplete with the oldMet inferred date
+  for (j in 1:nrow(dates)){
+    if(length(unlist(strsplit(dates$date[j],split="-")))<3){
+      matchy<-which(oldMet$tip.label==dates$node_name[j])
+      if (length(matchy)>0){
+        dates$date[j]<-oldMet$date.lsd.full[matchy]
+      }
+    }
+  }
+  
+  #re-count incomps
+  incomp<-c()
+  for (j in 1:nrow(dates)){
+    if(length(unlist(strsplit(dates$date[j],split="-")))<3) incomp<-c(incomp,dates$node_name[j])
+  }
+    
+  # write fixed tree and fasta
+  write.tree(t,paste(output,"/fasttree_inc_rooted_res_",BOOTS[i],".tre",sep=""))
+  write.FASTA(ff,paste(output,"/fasttree_inc_rooted_res",BOOTS[i],".fasta",sep=""))
+
+  #now export the dates
+  write.table(dates, paste(output,"/dateFile_",BOOTS[i],".txt",sep=""), row.names=F, sep="\t", quote = F, col.names=F)
+
+}
+
+

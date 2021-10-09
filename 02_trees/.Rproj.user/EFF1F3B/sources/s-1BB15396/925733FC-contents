@@ -1,0 +1,70 @@
+#!/usr/bin/env Rscript
+# Root tree and remove temporal outliers
+
+#usage:
+# $Rscript 
+
+#setup libraries
+library(ggplot2)
+library(stringr)
+library(ape)
+library(treeio)
+library(adephylo)
+
+
+#### Inputs and outputs here ####
+# inputs from commandline
+args<-commandArgs(trailingOnly=TRUE)
+treebase<-args[1] #folder with trees
+fastabase<-args[2] #folder with alignments corresponding to trees
+b<-as.numeric(args[3]) #boots length
+
+## Or, change inputs manually
+treebase<-"ft"
+fastabase<-"../01_subSample/bootsamples"
+b<-10
+
+#setup treefiles, alignment files using folders
+trees.in<-list.files(treebase,pattern = ".tre",full.names = T)
+fastas.in<-list.files(fastabase,pattern=".fasta",full.names = T)
+
+#set up outputs
+#bootstraps to iterate over
+BOOTS<-1:b
+
+# On rooting 
+# In the manuscript, we followed recommendation (Rambaut 2020 Nature) to root on earliest lineage A viruses:Wuhan/WH04/2020 (EPI_ISL_406801), sampled on 5 January 2020, 
+# however here, we root on Wuhan-Hu-1 (GenBank accession no. MN908947) sampled on 26 December 2019, because this fake dataset doesn't have EPI_ISL_406801
+#read in trees into a list
+trees<-replicate(n=b, vector)
+for (i in 1:b){
+  trees[[i]]<-read.tree(file=trees.in[i])
+
+#force into binary, ie resolve polytomies randomly
+  if (!is.binary(trees[[i]])){
+      trees[[i]]<-multi2di(trees[[i]])
+  }
+
+#earliest lineage A virus:Wuhan/WH04/2020 sampled 2020-01-05,
+##### According to Rambaut, MRCA of whole outbreak as it shares two muts not found in wuhan-hu-1
+# linA<-"EPI_ISL_406801"
+# linA.tip<-str_which(trees[[i]]$tip.label,linA)
+
+#earliest lineage B virus: "Wuhan-Hu-1" (Genbank accession MN908947) sampled on 2019-12-26
+linB<-"EPI_ISL_FAKE_1" #"EPI_ISL_402125" #use the latter if using real data
+linB.tip<-str_which(trees[[i]]$tip.label,linB)
+
+#find the MRCA node of lineages A and B
+# AB.mrca<-getMRCA(trees[[i]],tip=c(linB.tip,linA.tip))
+
+#re-root it on outgroup
+trees[[i]]<-ape::unroot(trees[[i]])
+trees[[i]]<-ape::root(trees[[i]],outgroup=linB.tip,resolve.root=TRUE)
+
+# is.rooted(trees[[i]])
+# export trees
+write.tree(trees[[i]],file=paste(base,"_rooted/",BOOTS[i],".tre",sep=""))
+}
+
+
+

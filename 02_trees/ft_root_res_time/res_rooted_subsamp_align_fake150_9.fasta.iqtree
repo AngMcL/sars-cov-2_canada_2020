@@ -1,0 +1,382 @@
+IQ-TREE 2.1.2 COVID-edition built Oct 22 2020
+
+Input file name: res_rooted_subsamp_align_fake150_9.fasta
+User tree file name: res_rooted_subsamp_align_fake150_9.tre
+Type of analysis: tree reconstruction
+Random seed number: 67174
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+Since you used least square dating (LSD) please also cite: 
+
+Thu-Hien To, Matthieu Jung, Samantha Lycett, Olivier Gascuel (2016)
+Fast dating using least-squares criteria and algorithms. Syst. Biol. 65:82-97.
+https://doi.org/10.1093/sysbio/syv068
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 141 sequences with 29903 nucleotide sites
+Number of constant sites: 29016 (= 97.0337% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 29016 (= 97.0337% of all sites)
+Number of parsimony informative sites: 335
+Number of distinct site patterns: 729
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: GTR+F+I+R3
+
+Rate parameter R:
+
+  A-C: 0.9422
+  A-G: 0.8066
+  A-T: 0.8099
+  C-G: 1.2002
+  C-T: 0.9266
+  G-T: 1.0000
+
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.2988
+  pi(C) = 0.184
+  pi(G) = 0.1961
+  pi(T) = 0.321
+
+Rate matrix Q:
+
+  A   -0.8756    0.2566    0.2342    0.3849
+  C    0.4167    -1.206    0.3485    0.4403
+  G    0.3568    0.3269    -1.159    0.4752
+  T    0.3582    0.2524    0.2903   -0.9009
+
+Model of rate heterogeneity: Invar+FreeRate with 3 categories
+Proportion of invariable sites: 0.4561
+Site proportion and rates:  (0.1779,1.783) (0.1831,1.854) (0.1829,1.877)
+
+ Category  Relative_rate  Proportion
+  0         0              0.4561
+  1         1.783          0.1779
+  2         1.854          0.1831
+  3         1.877          0.1829
+
+USER TREE
+---------
+
+Log-likelihood of the tree: -49934.7256 (s.e. 298.6910)
+Unconstrained log-likelihood (without tree): -50279.4329
+Number of free parameters (#branches + #model parameters): 292
+Akaike information criterion (AIC) score: 100453.4511
+Corrected Akaike information criterion (AICc) score: 100459.2300
+Bayesian information criterion (BIC) score: 102878.7196
+
+Total tree length (sum of branch lengths): 0.0304
+Sum of internal branch lengths: 0.0112 (36.7633% of tree length)
+
+WARNING: 43 near-zero internal branches (<0.0000) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'China/fake_1/2020/EPI_ISL_FAKE_1/2019-12-26' is drawn at root
+
+                               +------Canada/fake_146/2021/EPI_ISL_FAKE_146/2021-02-01
+                          +----| (0.951)
+                          |    |  +**Canada/fake_48/2020/EPI_ISL_FAKE_48/2020-12-12
+                          |    +**| (0.413)
+                          |       |  +--Canada/fake_53/2020/EPI_ISL_FAKE_53/2020-12-14
+                          |       +--| (0.892)
+                          |          |      +--Canada/fake_127/2021/EPI_ISL_FAKE_127/2021-01-25
+                          |          +------| (0.966)
+                          |                 +--USA/fake_181/2021/EPI_ISL_FAKE_181/2021-02-10
+                       +**|
+                       |  +------------------UnitedKingdom/fake_200/2021/EPI_ISL_FAKE_200/2021-02-18
+                    +**| (0.971)
+                    |  |         +----Canada/fake_164/2021/EPI_ISL_FAKE_164/2021-02-06
+                    |  |  +------| (0.951)
+                    |  |  |      +----Canada/fake_167/2021/EPI_ISL_FAKE_167/2021-02-06
+                    |  +**| (0.998)
+                    |     +------------Canada/fake_67/2020/EPI_ISL_FAKE_67/2020-12-26
+                 +**| (0.000)
+                 |  |  +----------------Canada/fake_169/2021/EPI_ISL_FAKE_169/2021-02-07
+                 |  +**| (0.994)
+                 |     +------Canada/fake_84/2021/EPI_ISL_FAKE_84/2021-01-07
+            +----| (0.741)
+            |    |        +--Portugal/fake_47/2020/EPI_ISL_FAKE_47/2020-12-12
+            |    +--------| (0.985)
+            |             +--Canada/fake_115/2021/EPI_ISL_FAKE_115/2021-01-22
+         +--| (0.957)
+         |  |  +**Canada/fake_4/2020/EPI_ISL_FAKE_4/2020-08-01
+         |  +**| (0.971)
+         |     |  +--Canada/fake_3/2020/EPI_ISL_FAKE_3/2020-07-13
+         |     +**| (0.910)
+         |        +----UnitedKingdom/fake_7/2020/EPI_ISL_FAKE_7/2020-08-13
+      +--| (0.921)
+      |  |        +--------------USA/fake_15/2020/EPI_ISL_FAKE_15/2020-10-13
+      |  |     +--| (0.868)
+      |  |     |  |    +--------USA/fake_51/2020/EPI_ISL_FAKE_51/2020-12-13
+      |  |     |  +----| (0.940)
+      |  |     |       |  +----Canada/fake_16/2020/EPI_ISL_FAKE_16/2020-10-14
+      |  |     |       +**| (0.001)
+      |  |     |          |  +--------------Canada/fake_50/2020/EPI_ISL_FAKE_50/2020-12-12
+      |  |     |          +--| (0.743)
+      |  |     |             |        +--Canada/fake_38/2020/EPI_ISL_FAKE_38/2020-11-28
+      |  |     |             +--------| (0.975)
+      |  |     |                      +----------Canada/fake_128/2021/EPI_ISL_FAKE_128/2021-01-25
+      |  |  +--| (0.869)
+      |  |  |  |     +--Canada/fake_21/2020/EPI_ISL_FAKE_21/2020-10-26
+      |  |  |  |  +--| (0.863)
+      |  |  |  |  |  |  +------Canada/fake_174/2021/EPI_ISL_FAKE_174/2021-02-08
+      |  |  |  |  |  +--| (0.759)
+      |  |  |  |  |     |  +--------------Canada/fake_106/2021/EPI_ISL_FAKE_106/2021-01-17
+      |  |  |  |  |     +--| (0.845)
+      |  |  |  |  |        +----------UnitedKingdom/fake_119/2021/EPI_ISL_FAKE_119/2021-01-23
+      |  |  |  +--| (0.867)
+      |  |  |     |     +------Canada/fake_55/2020/EPI_ISL_FAKE_55/2020-12-14
+      |  |  |     |  +--| (0.847)
+      |  |  |     |  |  |  +--Canada/fake_32/2020/EPI_ISL_FAKE_32/2020-11-16
+      |  |  |     |  |  +**| (0.193)
+      |  |  |     |  |     |  +**UnitedKingdom/fake_22/2020/EPI_ISL_FAKE_22/2020-10-26
+      |  |  |     |  |     +--| (0.843)
+      |  |  |     |  |        +--------USA/fake_69/2020/EPI_ISL_FAKE_69/2020-12-27
+      |  |  |     +**| (0.213)
+      |  |  |        +--------------------UnitedKingdom/fake_137/2021/EPI_ISL_FAKE_137/2021-01-29
+      |  +**| (0.366)
+      |     |                       +------Canada/fake_83/2021/EPI_ISL_FAKE_83/2021-01-07
+      |     |  +--------------------| (0.996)
+      |     |  |                    +--------------------Canada/fake_87/2021/EPI_ISL_FAKE_87/2021-01-08
+      |     +--| (0.898)
+      |        |              +----------Italy/fake_132/2021/EPI_ISL_FAKE_132/2021-01-26
+      |        +--------------| (0.990)
+      |                       |      +--Canada/fake_57/2020/EPI_ISL_FAKE_57/2020-12-17
+      |                       +------| (0.949)
+      |                              +------------Canada/fake_166/2021/EPI_ISL_FAKE_166/2021-02-06
+   +**| (0.837)
+   |  |           +----------------France/fake_195/2021/EPI_ISL_FAKE_195/2021-02-16
+   |  |        +--| (0.770)
+   |  |        |  |  +----------Spain/fake_9/2020/EPI_ISL_FAKE_9/2020-09-06
+   |  |        |  +--| (0.734)
+   |  |        |     +------------------UnitedKingdom/fake_70/2020/EPI_ISL_FAKE_70/2020-12-27
+   |  +--------| (0.986)
+   |           |                               +--Canada/fake_49/2020/EPI_ISL_FAKE_49/2020-12-12
+   |           |  +----------------------------| (1.000)
+   |           |  |                            +----------Canada/fake_161/2021/EPI_ISL_FAKE_161/2021-02-05
+   |           +**| (0.268)
+   |              |  +**Canada/fake_8/2020/EPI_ISL_FAKE_8/2020-08-20
+   |              +--| (0.924)
+   |                 |  +--UnitedKingdom/fake_23/2020/EPI_ISL_FAKE_23/2020-10-27
+   |                 +--| (0.871)
+   |                    |  +------------------Canada/fake_79/2021/EPI_ISL_FAKE_79/2021-01-05
+   |                    +--| (0.849)
+   |                       |      +------Canada/fake_91/2021/EPI_ISL_FAKE_91/2021-01-10
+   |                       +------| (0.950)
+   |                              +------Canada/fake_101/2021/EPI_ISL_FAKE_101/2021-01-16
++**| (0.316)
+|  |                        +**Canada/fake_66/2020/EPI_ISL_FAKE_66/2020-12-24
+|  |                     +--| (0.917)
+|  |                     |  +----USA/fake_113/2021/EPI_ISL_FAKE_113/2021-01-21
+|  |                +----| (0.921)
+|  |                |    |  +--Canada/fake_27/2020/EPI_ISL_FAKE_27/2020-11-05
+|  |                |    +**| (0.303)
+|  |                |       |     +----UnitedKingdom/fake_36/2020/EPI_ISL_FAKE_36/2020-11-24
+|  |                |       |  +--| (0.852)
+|  |                |       |  |  |              +--Canada/fake_82/2021/EPI_ISL_FAKE_82/2021-01-05
+|  |                |       |  |  +--------------| (0.991)
+|  |                |       |  |                 |  +**Canada/fake_173/2021/EPI_ISL_FAKE_173/2021-02-08
+|  |                |       |  |                 +--| (0.886)
+|  |                |       |  |                    +--Canada/fake_191/2021/EPI_ISL_FAKE_191/2021-02-13
+|  |                |       +**| (0.673)
+|  |                |          +--USA/fake_35/2020/EPI_ISL_FAKE_35/2020-11-23
+|  |       +--------| (0.981)
+|  |       |        |     +----------Canada/fake_44/2020/EPI_ISL_FAKE_44/2020-12-05
+|  |       |        |  +**| (0.896)
+|  |       |        |  |  |      +--Canada/fake_63/2020/EPI_ISL_FAKE_63/2020-12-24
+|  |       |        |  |  +------| (0.968)
+|  |       |        |  |         +**Canada/fake_68/2020/EPI_ISL_FAKE_68/2020-12-26
+|  |       |        +--| (0.735)
+|  |       |           |  +--Thailand/fake_14/2020/EPI_ISL_FAKE_14/2020-10-13
+|  |       |           +**| (0.365)
+|  |       |              +--------------USA/fake_99/2021/EPI_ISL_FAKE_99/2021-01-15
+|  |  +----| (0.927)
+|  |  |    |                    +--------Canada/fake_76/2021/EPI_ISL_FAKE_76/2021-01-03
+|  |  |    |       +------------| (0.997)
+|  |  |    |       |            |  +------------Canada/fake_148/2021/EPI_ISL_FAKE_148/2021-02-02
+|  |  |    |       |            +**| (0.153)
+|  |  |    |       |               |  +--Netherlands/fake_40/2020/EPI_ISL_FAKE_40/2020-11-29
+|  |  |    |       |               +--| (0.770)
+|  |  |    |       |                  +--------SouthAfrica/fake_177/2021/EPI_ISL_FAKE_177/2021-02-09
+|  |  |    |    +--| (0.953)
+|  |  |    |    |  |                  +--Canada/fake_86/2021/EPI_ISL_FAKE_86/2021-01-08
+|  |  |    |    |  |     +------------| (0.992)
+|  |  |    |    |  |     |            +----------Canada/fake_175/2021/EPI_ISL_FAKE_175/2021-02-09
+|  |  |    |    |  |  +**| (1.000)
+|  |  |    |    |  |  |  +----------------USA/fake_192/2021/EPI_ISL_FAKE_192/2021-02-13
+|  |  |    |    |  +**| (0.959)
+|  |  |    |    |     |  +--------USA/fake_24/2020/EPI_ISL_FAKE_24/2020-10-30
+|  |  |    |    |     +**| (0.000)
+|  |  |    |    |        +--------------France/fake_54/2020/EPI_ISL_FAKE_54/2020-12-14
+|  |  |    +----| (0.933)
+|  |  |         |                +--------Russia/fake_129/2021/EPI_ISL_FAKE_129/2021-01-26
+|  |  |         |     +----------| (0.987)
+|  |  |         |     |          +----------Canada/fake_134/2021/EPI_ISL_FAKE_134/2021-01-27
+|  |  |         |  +--| (0.868)
+|  |  |         |  |  |  +------Canada/fake_42/2020/EPI_ISL_FAKE_42/2020-12-01
+|  |  |         |  |  +--| (0.872)
+|  |  |         |  |     +--------------Canada/fake_80/2021/EPI_ISL_FAKE_80/2021-01-05
+|  |  |         +**| (0.660)
+|  |  |            |                            +----Canada/fake_33/2020/EPI_ISL_FAKE_33/2020-11-19
+|  |  |            |                         +--| (0.870)
+|  |  |            |                         |  |  +--------Canada/fake_171/2021/EPI_ISL_FAKE_171/2021-02-08
+|  |  |            |                         |  +**| (0.755)
+|  |  |            |                         |     |    +----Canada/fake_97/2021/EPI_ISL_FAKE_97/2021-01-14
+|  |  |            |                         |     +----| (0.924)
+|  |  |            |                         |          |  +----UnitedKingdom/fake_188/2021/EPI_ISL_FAKE_188/2021-02-12
+|  |  |            |                         |          +**| (0.073)
+|  |  |            |                         |             +----------Canada/fake_100/2021/EPI_ISL_FAKE_100/2021-01-16
+|  |  |            |  +----------------------| (0.998)
+|  |  |            |  |                      |       +**Canada/fake_72/2020/EPI_ISL_FAKE_72/2020-12-29
+|  |  |            |  |                      |  +----| (0.942)
+|  |  |            |  |                      |  |    +**Canada/fake_77/2021/EPI_ISL_FAKE_77/2021-01-03
+|  |  |            |  |                      +**| (0.735)
+|  |  |            |  |                         |  +----Canada/fake_58/2020/EPI_ISL_FAKE_58/2020-12-18
+|  |  |            |  |                         +--| (0.869)
+|  |  |            |  |                            +----------UnitedKingdom/fake_71/2020/EPI_ISL_FAKE_71/2020-12-27
+|  |  |            +**| (0.400)
+|  |  |               |     +**Canada/fake_5/2020/EPI_ISL_FAKE_5/2020-08-01
+|  |  |               |  +--|
+|  |  |               |  |  +**Canada/fake_6/2020/EPI_ISL_FAKE_6/2020-08-03
+|  |  |               +**| (0.806)
+|  |  |                  |               +----------------Canada/fake_163/2021/EPI_ISL_FAKE_163/2021-02-05
+|  |  |                  |  +------------| (0.989)
+|  |  |                  |  |            |  +--------Canada/fake_75/2021/EPI_ISL_FAKE_75/2021-01
+|  |  |                  |  |            +**| (0.128)
+|  |  |                  |  |               |  +**Canada/fake_46/2020/EPI_ISL_FAKE_46/2020-12-09
+|  |  |                  |  |               +**| (0.795)
+|  |  |                  |  |                  +----------UnitedKingdom/fake_156/2021/EPI_ISL_FAKE_156/2021-02-02
+|  |  |                  +--| (0.877)
+|  |  |                     |    +------------------Canada/fake_109/2021/EPI_ISL_FAKE_109/2021-01-19
+|  |  |                     +----| (0.932)
+|  |  |                          |  +----------Canada/fake_172/2021/EPI_ISL_FAKE_172/2021-02-08
+|  |  |                          +--| (0.864)
+|  |  |                             +------------UnitedKingdom/fake_189/2021/EPI_ISL_FAKE_189/2021-02-13
+|  +**| (0.471)
+|     |                       +**Canada/fake_56/2020/EPI_ISL_FAKE_56/2020-12-15
+|     |  +--------------------| (1.000)
+|     |  |                    +--Canada/fake_85/2021/EPI_ISL_FAKE_85/2021-01-08
+|     +--| (0.871)
+|        |        +------Canada/fake_37/2020/EPI_ISL_FAKE_37/2020-11-24
+|        +--------| (0.980)
+|                 +------------------USA/fake_103/2021/EPI_ISL_FAKE_103/2021-01-17
+| (0.908)
+|                   +------------------USA/fake_178/2021/EPI_ISL_FAKE_178/2021-02-09
+|                +--| (0.748)
+|                |  |    +--Canada/fake_93/2021/EPI_ISL_FAKE_93/2021-01-10
+|                |  +----| (0.922)
+|                |       +--------------France/fake_184/2021/EPI_ISL_FAKE_184/2021-02-12
+|             +--| (0.865)
+|             |  |              +------Canada/fake_73/2020/EPI_ISL_FAKE_73/2020-12
+|             |  |     +--------| (0.978)
+|             |  |     |        +--------Canada/fake_114/2021/EPI_ISL_FAKE_114/2021-01
+|             |  |  +--| (0.867)
+|             |  |  |  |        +--Canada/fake_45/2020/EPI_ISL_FAKE_45/2020-12-07
+|             |  |  |  +--------| (0.986)
+|             |  |  |           |  +--Canada/fake_74/2021/EPI_ISL_FAKE_74/2021-01-02
+|             |  |  |           +--| (0.870)
+|             |  |  |              +------USA/fake_144/2021/EPI_ISL_FAKE_144/2021-01-30
+|             |  +**| (0.867)
+|             |     |       +----Canada/fake_12/2020/EPI_ISL_FAKE_12/2020-10-05
+|             |     |  +----| (0.934)
+|             |     |  |    +----------Canada/fake_117/2021/EPI_ISL_FAKE_117/2021-01-22
+|             |     +--| (0.761)
+|             |        |       +--------Canada/fake_61/2020/EPI_ISL_FAKE_61/2020-12-19
+|             |        |  +----| (0.943)
+|             |        |  |    +----------Canada/fake_147/2021/EPI_ISL_FAKE_147/2021-02-01
+|             |        +--| (0.868)
+|             |           |  +------Canada/fake_64/2020/EPI_ISL_FAKE_64/2020-12-24
+|             |           +--| (0.769)
+|             |              |  +**Canada/fake_25/2020/EPI_ISL_FAKE_25/2020-10-30
+|             |              +--| (0.895)
+|             |                 +----Canada/fake_162/2021/EPI_ISL_FAKE_162/2021-02-05
+|  +----------| (0.990)
+|  |          |  +**UnitedKingdom/fake_2/2020/EPI_ISL_FAKE_2/2020-07-02
+|  |          +**| (0.217)
+|  |             |               +--UnitedKingdom/fake_34/2020/EPI_ISL_FAKE_34/2020-11-20
+|  |             |            +--| (0.884)
+|  |             |            |  +------------France/fake_120/2021/EPI_ISL_FAKE_120/2021-01-23
+|  |             +------------| (0.970)
+|  |                          |  +------------------Canada/fake_126/2021/EPI_ISL_FAKE_126/2021-01-25
+|  |                          +**| (0.189)
+|  |                             +--------------------Canada/fake_52/2020/EPI_ISL_FAKE_52/2020-12-13
++**| (0.762)
+|  |                                +**USA/fake_19/2020/EPI_ISL_FAKE_19/2020-10-18
+|  |           +--------------------| (1.000)
+|  |           |                    +--Canada/fake_29/2020/EPI_ISL_FAKE_29/2020-11
+|  |        +**| (0.994)
+|  |        |  |        +------------Canada/fake_39/2020/EPI_ISL_FAKE_39/2020-11-28
+|  |        |  +--------| (0.969)
+|  |        |           |      +**Canada/fake_41/2020/EPI_ISL_FAKE_41/2020-11-29
+|  |        |           +------| (0.949)
+|  |        |                  +--Canada/fake_60/2020/EPI_ISL_FAKE_60/2020-12-18
+|  +--------| (0.999)
+|           |                         +----USA/fake_92/2021/EPI_ISL_FAKE_92/2021-01-10
+|           |                +--------| (0.973)
+|           |                |        +------Canada/fake_160/2021/EPI_ISL_FAKE_160/2021-02-04
+|           |     +----------| (0.990)
+|           |     |          |  +----------Canada/fake_81/2021/EPI_ISL_FAKE_81/2021-01-05
+|           |     |          +**| (0.020)
+|           |     |             +--Canada/fake_28/2020/EPI_ISL_FAKE_28/2020-11-05
+|           |  +--| (0.753)
+|           |  |  |        +--------------USA/fake_142/2021/EPI_ISL_FAKE_142/2021-01-29
+|           |  |  +--------| (0.966)
+|           |  |           |  +--Canada/fake_78/2021/EPI_ISL_FAKE_78/2021-01-04
+|           |  |           +--| (0.855)
+|           |  |              +----Canada/fake_135/2021/EPI_ISL_FAKE_135/2021-01-28
+|           +**| (0.903)
+|              |         +--Canada/fake_10/2020/EPI_ISL_FAKE_10/2020-10-01
+|              |  +------| (0.963)
+|              |  |      |       +----USA/fake_17/2020/EPI_ISL_FAKE_17/2020-10-14
+|              |  |      |  +----| (0.941)
+|              |  |      |  |    |     +----Canada/fake_59/2020/EPI_ISL_FAKE_59/2020-12-18
+|              |  |      |  |    |  +--| (0.726)
+|              |  |      |  |    |  |  +----------------Canada/fake_176/2021/EPI_ISL_FAKE_176/2021-02-09
+|              |  |      |  |    +--| (0.765)
+|              |  |      |  |       |  +--Canada/fake_26/2020/EPI_ISL_FAKE_26/2020-11-02
+|              |  |      |  |       +**| (0.205)
+|              |  |      |  |          |      +----------UnitedKingdom/fake_139/2021/EPI_ISL_FAKE_139/2021-01-29
+|              |  |      |  |          +------| (0.964)
+|              |  |      |  |                 +--Canada/fake_165/2021/EPI_ISL_FAKE_165/2021-02-06
+|              |  |      +**| (0.019)
+|              |  |         +------Canada/fake_30/2020/EPI_ISL_FAKE_30/2020-11-12
+|              +--| (0.745)
+|                 |           +------UnitedKingdom/fake_95/2021/EPI_ISL_FAKE_95/2021-01-14
+|                 |    +------| (0.952)
+|                 |    |      +--------Canada/fake_170/2021/EPI_ISL_FAKE_170/2021-02
+|                 +----| (0.946)
+|                      |     +----Japan/fake_65/2020/EPI_ISL_FAKE_65/2020-12-24
+|                      |  +**| (0.786)
+|                      |  |  +----USA/fake_122/2021/EPI_ISL_FAKE_122/2021-01-23
+|                      +--| (0.765)
+|                         |  +--Canada/fake_13/2020/EPI_ISL_FAKE_13/2020-10-10
+|                         +**| (0.128)
+|                            +--UnitedKingdom/fake_31/2020/EPI_ISL_FAKE_31/2020-11-13
+|
++**China/fake_1/2020/EPI_ISL_FAKE_1/2019-12-26
+
+Tree in newick format:
+
+((((((((((Canada/fake_146/2021/EPI_ISL_FAKE_146/2021-02-01:0.0001348646,(Canada/fake_48/2020/EPI_ISL_FAKE_48/2020-12-12:0.0000005158,(Canada/fake_53/2020/EPI_ISL_FAKE_53/2020-12-14:0.0000337038,(Canada/fake_127/2021/EPI_ISL_FAKE_127/2021-01-25:0.0000674317,USA/fake_181/2021/EPI_ISL_FAKE_181/2021-02-10:0.0000674317)0.966:0.0001348949)0.892:0.0000674323)0.413:0.0000005158)0.951:0.0001011426,UnitedKingdom/fake_200/2021/EPI_ISL_FAKE_200/2021-02-18:0.0003373438):0.0000005158,((Canada/fake_164/2021/EPI_ISL_FAKE_164/2021-02-06:0.0001011642,Canada/fake_167/2021/EPI_ISL_FAKE_167/2021-02-06:0.0001011708)0.951:0.0001349012,Canada/fake_67/2020/EPI_ISL_FAKE_67/2020-12-26:0.0002360821)0.998:0.0000005158)0.971:0.0000005158,(Canada/fake_169/2021/EPI_ISL_FAKE_169/2021-02-07:0.0003035870,Canada/fake_84/2021/EPI_ISL_FAKE_84/2021-01-07:0.0001348895)0.994:0.0000005158)0.000:0.0000005158,(Portugal/fake_47/2020/EPI_ISL_FAKE_47/2020-12-12:0.0000337119,Canada/fake_115/2021/EPI_ISL_FAKE_115/2021-01-22:0.0000674438)0.985:0.0001686443)0.741:0.0001011624,(Canada/fake_4/2020/EPI_ISL_FAKE_4/2020-08-01:0.0000005158,(Canada/fake_3/2020/EPI_ISL_FAKE_3/2020-07-13:0.0000337154,UnitedKingdom/fake_7/2020/EPI_ISL_FAKE_7/2020-08-13:0.0001011624)0.910:0.0000005158)0.971:0.0000005158)0.957:0.0000674361,(((USA/fake_15/2020/EPI_ISL_FAKE_15/2020-10-13:0.0002699216,(USA/fake_51/2020/EPI_ISL_FAKE_51/2020-12-13:0.0001686436,(Canada/fake_16/2020/EPI_ISL_FAKE_16/2020-10-14:0.0001011742,(Canada/fake_50/2020/EPI_ISL_FAKE_50/2020-12-12:0.0002699644,(Canada/fake_38/2020/EPI_ISL_FAKE_38/2020-11-28:0.0000337138,Canada/fake_128/2021/EPI_ISL_FAKE_128/2021-01-25:0.0002024399)0.975:0.0001687486)0.743:0.0000336768)0.001:0.0000005158)0.940:0.0001011795)0.868:0.0000674648,((Canada/fake_21/2020/EPI_ISL_FAKE_21/2020-10-26:0.0000674594,(Canada/fake_174/2021/EPI_ISL_FAKE_174/2021-02-08:0.0001349410,(Canada/fake_106/2021/EPI_ISL_FAKE_106/2021-01-17:0.0002699969,UnitedKingdom/fake_119/2021/EPI_ISL_FAKE_119/2021-01-23:0.0002024888)0.845:0.0000674485)0.759:0.0000337207)0.863:0.0000337269,((Canada/fake_55/2020/EPI_ISL_FAKE_55/2020-12-14:0.0001349393,(Canada/fake_32/2020/EPI_ISL_FAKE_32/2020-11-16:0.0000337283,(UnitedKingdom/fake_22/2020/EPI_ISL_FAKE_22/2020-10-26:0.0000005158,USA/fake_69/2020/EPI_ISL_FAKE_69/2020-12-27:0.0001686994)0.843:0.0000337282)0.193:0.0000005158)0.847:0.0000337275,UnitedKingdom/fake_137/2021/EPI_ISL_FAKE_137/2021-01-29:0.0003712639)0.213:0.0000005158)0.867:0.0000674620)0.869:0.0000674509,((Canada/fake_83/2021/EPI_ISL_FAKE_83/2021-01-07:0.0001348455,Canada/fake_87/2021/EPI_ISL_FAKE_87/2021-01-08:0.0003713241)0.996:0.0003714373,(Italy/fake_132/2021/EPI_ISL_FAKE_132/2021-01-26:0.0002024466,(Canada/fake_57/2020/EPI_ISL_FAKE_57/2020-12-17:0.0000337058,Canada/fake_166/2021/EPI_ISL_FAKE_166/2021-02-06:0.0002361536)0.949:0.0001349300)0.990:0.0002700982)0.898:0.0000673752)0.366:0.0000005158)0.921:0.0000337295,((France/fake_195/2021/EPI_ISL_FAKE_195/2021-02-16:0.0003037752,(Spain/fake_9/2020/EPI_ISL_FAKE_9/2020-09-06:0.0002025463,UnitedKingdom/fake_70/2020/EPI_ISL_FAKE_70/2020-12-27:0.0003376469)0.734:0.0000336739)0.770:0.0000337270,((Canada/fake_49/2020/EPI_ISL_FAKE_49/2020-12-12:0.0000674187,Canada/fake_161/2021/EPI_ISL_FAKE_161/2021-02-05:0.0002025387)1.000:0.0005066519,(Canada/fake_8/2020/EPI_ISL_FAKE_8/2020-08-20:0.0000005158,(UnitedKingdom/fake_23/2020/EPI_ISL_FAKE_23/2020-10-27:0.0000674772,(Canada/fake_79/2021/EPI_ISL_FAKE_79/2021-01-05:0.0003376033,(Canada/fake_91/2021/EPI_ISL_FAKE_91/2021-01-10:0.0001349890,Canada/fake_101/2021/EPI_ISL_FAKE_101/2021-01-16:0.0001349837)0.950:0.0001350154)0.849:0.0000674799)0.871:0.0000674763)0.924:0.0000337335)0.268:0.0000005158)0.986:0.0001687011)0.837:0.0000005158,(((((Canada/fake_66/2020/EPI_ISL_FAKE_66/2020-12-24:0.0000005158,USA/fake_113/2021/EPI_ISL_FAKE_113/2021-01-21:0.0001012347)0.917:0.0000337401,(Canada/fake_27/2020/EPI_ISL_FAKE_27/2020-11-05:0.0000337414,((UnitedKingdom/fake_36/2020/EPI_ISL_FAKE_36/2020-11-24:0.0001012499,(Canada/fake_82/2021/EPI_ISL_FAKE_82/2021-01-05:0.0000337286,(Canada/fake_173/2021/EPI_ISL_FAKE_173/2021-02-08:0.0000005158,Canada/fake_191/2021/EPI_ISL_FAKE_191/2021-02-13:0.0000674853)0.886:0.0000675040)0.991:0.0002701402)0.852:0.0000674921,USA/fake_35/2020/EPI_ISL_FAKE_35/2020-11-23:0.0000674857)0.673:0.0000005158)0.303:0.0000005158)0.921:0.0001012548,((Canada/fake_44/2020/EPI_ISL_FAKE_44/2020-12-05:0.0002025139,(Canada/fake_63/2020/EPI_ISL_FAKE_63/2020-12-24:0.0000337402,Canada/fake_68/2020/EPI_ISL_FAKE_68/2020-12-26:0.0000005158)0.968:0.0001349947)0.896:0.0000005158,(Thailand/fake_14/2020/EPI_ISL_FAKE_14/2020-10-13:0.0000337395,USA/fake_99/2021/EPI_ISL_FAKE_99/2021-01-15:0.0002700513)0.365:0.0000005158)0.735:0.0000337294)0.981:0.0001688030,(((Canada/fake_76/2021/EPI_ISL_FAKE_76/2021-01-03:0.0001687505,(Canada/fake_148/2021/EPI_ISL_FAKE_148/2021-02-02:0.0002362995,(Netherlands/fake_40/2020/EPI_ISL_FAKE_40/2020-11-29:0.0000337423,SouthAfrica/fake_177/2021/EPI_ISL_FAKE_177/2021-02-09:0.0001687627)0.770:0.0000337422)0.153:0.0000005158)0.997:0.0002362937,(((Canada/fake_86/2021/EPI_ISL_FAKE_86/2021-01-08:0.0000674699,Canada/fake_175/2021/EPI_ISL_FAKE_175/2021-02-09:0.0002026201)0.992:0.0002363873,USA/fake_192/2021/EPI_ISL_FAKE_192/2021-02-13:0.0003038772)1.000:0.0000005158,(USA/fake_24/2020/EPI_ISL_FAKE_24/2020-10-30:0.0001687699,France/fake_54/2020/EPI_ISL_FAKE_54/2020-12-14:0.0002700845)0.000:0.0000005158)0.959:0.0000005158)0.953:0.0000674910,(((Russia/fake_129/2021/EPI_ISL_FAKE_129/2021-01-26:0.0001688317,Canada/fake_134/2021/EPI_ISL_FAKE_134/2021-01-27:0.0002026100)0.987:0.0002026468,(Canada/fake_42/2020/EPI_ISL_FAKE_42/2020-12-01:0.0001350461,Canada/fake_80/2021/EPI_ISL_FAKE_80/2021-01-05:0.0002701756)0.872:0.0000675067)0.868:0.0000675070,(((Canada/fake_33/2020/EPI_ISL_FAKE_33/2020-11-19:0.0001012724,(Canada/fake_171/2021/EPI_ISL_FAKE_171/2021-02-08:0.0001688258,(Canada/fake_97/2021/EPI_ISL_FAKE_97/2021-01-14:0.0001012716,(UnitedKingdom/fake_188/2021/EPI_ISL_FAKE_188/2021-02-12:0.0001012709,Canada/fake_100/2021/EPI_ISL_FAKE_100/2021-01-16:0.0002025884)0.073:0.0000005158)0.924:0.0001012917)0.755:0.0000333141)0.870:0.0000675359,((Canada/fake_72/2020/EPI_ISL_FAKE_72/2020-12-29:0.0000005158,Canada/fake_77/2021/EPI_ISL_FAKE_77/2021-01-03:0.0000332952)0.942:0.0001012690,(Canada/fake_58/2020/EPI_ISL_FAKE_58/2020-12-18:0.0001012732,UnitedKingdom/fake_71/2020/EPI_ISL_FAKE_71/2020-12-27:0.0002025889)0.869:0.0000675205)0.735:0.0000333026)0.998:0.0004053870,((Canada/fake_5/2020/EPI_ISL_FAKE_5/2020-08-01:0.0000005158,Canada/fake_6/2020/EPI_ISL_FAKE_6/2020-08-03:0.0000005158):0.0000675153,((Canada/fake_163/2021/EPI_ISL_FAKE_163/2021-02-05:0.0003039606,(Canada/fake_75/2021/EPI_ISL_FAKE_75/2021-01:0.0001688213,(Canada/fake_46/2020/EPI_ISL_FAKE_46/2020-12-09:0.0000333932,UnitedKingdom/fake_156/2021/EPI_ISL_FAKE_156/2021-02-02:0.0002026181)0.795:0.0000333905)0.128:0.0000005158)0.989:0.0002364212,(Canada/fake_109/2021/EPI_ISL_FAKE_109/2021-01-19:0.0003378001,(Canada/fake_172/2021/EPI_ISL_FAKE_172/2021-02-08:0.0002026398,UnitedKingdom/fake_189/2021/EPI_ISL_FAKE_189/2021-02-13:0.0002364438)0.864:0.0000674877)0.932:0.0001013189)0.877:0.0000675157)0.806:0.0000333344)0.400:0.0000005158)0.660:0.0000005158)0.933:0.0001012549)0.927:0.0001012476,((Canada/fake_56/2020/EPI_ISL_FAKE_56/2020-12-15:0.0000005158,Canada/fake_85/2021/EPI_ISL_FAKE_85/2021-01-08:0.0000674794)1.000:0.0003714689,(Canada/fake_37/2020/EPI_ISL_FAKE_37/2020-11-24:0.0001350156,USA/fake_103/2021/EPI_ISL_FAKE_103/2021-01-17:0.0003377101)0.980:0.0001688359)0.871:0.0000674530)0.471:0.0000005158)0.316:0.0000333954,((((USA/fake_178/2021/EPI_ISL_FAKE_178/2021-02-09:0.0003378384,(Canada/fake_93/2021/EPI_ISL_FAKE_93/2021-01-10:0.0000334459,France/fake_184/2021/EPI_ISL_FAKE_184/2021-02-12:0.0002702446)0.922:0.0001013396)0.748:0.0000675212,(((Canada/fake_73/2020/EPI_ISL_FAKE_73/2020-12:0.0001350857,Canada/fake_114/2021/EPI_ISL_FAKE_114/2021-01:0.0001688904)0.978:0.0001689165,(Canada/fake_45/2020/EPI_ISL_FAKE_45/2020-12-07:0.0000334957,(Canada/fake_74/2021/EPI_ISL_FAKE_74/2021-01-02:0.0000334885,USA/fake_144/2021/EPI_ISL_FAKE_144/2021-01-30:0.0001350807)0.870:0.0000675347)0.986:0.0001688998)0.867:0.0000334682,((Canada/fake_12/2020/EPI_ISL_FAKE_12/2020-10-05:0.0001012899,Canada/fake_117/2021/EPI_ISL_FAKE_117/2021-01-22:0.0002026506)0.934:0.0001013284,((Canada/fake_61/2020/EPI_ISL_FAKE_61/2020-12-19:0.0001688826,Canada/fake_147/2021/EPI_ISL_FAKE_147/2021-02-01:0.0002026807)0.943:0.0001013233,(Canada/fake_64/2020/EPI_ISL_FAKE_64/2020-12-24:0.0001350909,(Canada/fake_25/2020/EPI_ISL_FAKE_25/2020-10-30:0.0000005158,Canada/fake_162/2021/EPI_ISL_FAKE_162/2021-02-05:0.0001012994)0.895:0.0000670745)0.769:0.0000335270)0.868:0.0000670426)0.761:0.0000334991)0.867:0.0000005158)0.865:0.0000334420,(UnitedKingdom/fake_2/2020/EPI_ISL_FAKE_2/2020-07-02:0.0000334027,((UnitedKingdom/fake_34/2020/EPI_ISL_FAKE_34/2020-11-20:0.0000675247,France/fake_120/2021/EPI_ISL_FAKE_120/2021-01-23:0.0002364417)0.884:0.0000675257,(Canada/fake_126/2021/EPI_ISL_FAKE_126/2021-01-25:0.0003377983,Canada/fake_52/2020/EPI_ISL_FAKE_52/2020-12-13:0.0003716051)0.189:0.0000005158)0.970:0.0002364061)0.217:0.0000005158)0.990:0.0002026154,(((USA/fake_19/2020/EPI_ISL_FAKE_19/2020-10-18:0.0000005158,Canada/fake_29/2020/EPI_ISL_FAKE_29/2020-11:0.0000335482)1.000:0.0003716376,(Canada/fake_39/2020/EPI_ISL_FAKE_39/2020-11-28:0.0002364987,(Canada/fake_41/2020/EPI_ISL_FAKE_41/2020-11-29:0.0000005158,Canada/fake_60/2020/EPI_ISL_FAKE_60/2020-12-18:0.0000335678)0.949:0.0001350990)0.969:0.0001688858)0.994:0.0000005158,((((USA/fake_92/2021/EPI_ISL_FAKE_92/2021-01-10:0.0001013057,Canada/fake_160/2021/EPI_ISL_FAKE_160/2021-02-04:0.0001350988)0.973:0.0001688776,(Canada/fake_81/2021/EPI_ISL_FAKE_81/2021-01-05:0.0002026466,Canada/fake_28/2020/EPI_ISL_FAKE_28/2020-11-05:0.0000335928)0.020:0.0000005158)0.990:0.0002026610,(USA/fake_142/2021/EPI_ISL_FAKE_142/2021-01-29:0.0002702910,(Canada/fake_78/2021/EPI_ISL_FAKE_78/2021-01-04:0.0000672262,Canada/fake_135/2021/EPI_ISL_FAKE_135/2021-01-28:0.0001008548)0.855:0.0000671949)0.966:0.0001689297)0.753:0.0000335739,((Canada/fake_10/2020/EPI_ISL_FAKE_10/2020-10-01:0.0000336451,((USA/fake_17/2020/EPI_ISL_FAKE_17/2020-10-14:0.0001009926,((Canada/fake_59/2020/EPI_ISL_FAKE_59/2020-12-18:0.0001010173,Canada/fake_176/2021/EPI_ISL_FAKE_176/2021-02-09:0.0003040948)0.726:0.0000336608,(Canada/fake_26/2020/EPI_ISL_FAKE_26/2020-11-02:0.0000336701,(UnitedKingdom/fake_139/2021/EPI_ISL_FAKE_139/2021-01-29:0.0002021957,Canada/fake_165/2021/EPI_ISL_FAKE_165/2021-02-06:0.0000336720)0.964:0.0001347534)0.205:0.0000005158)0.765:0.0000336550)0.941:0.0001009823,Canada/fake_30/2020/EPI_ISL_FAKE_30/2020-11-12:0.0001346278)0.019:0.0000005158)0.963:0.0001346182,((UnitedKingdom/fake_95/2021/EPI_ISL_FAKE_95/2021-01-14:0.0001350857,Canada/fake_170/2021/EPI_ISL_FAKE_170/2021-02:0.0001688648)0.952:0.0001351144,((Japan/fake_65/2020/EPI_ISL_FAKE_65/2020-12-24:0.0001009145,USA/fake_122/2021/EPI_ISL_FAKE_122/2021-01-23:0.0001009219)0.786:0.0000005158,(Canada/fake_13/2020/EPI_ISL_FAKE_13/2020-10-10:0.0000336375,UnitedKingdom/fake_31/2020/EPI_ISL_FAKE_31/2020-11-13:0.0000336385)0.128:0.0000005158)0.765:0.0000336211)0.946:0.0001008950)0.745:0.0000336196)0.903:0.0000005158)0.999:0.0001688544)0.762:0.0000005158,China/fake_1/2020/EPI_ISL_FAKE_1/2019-12-26:0.0000005183)0.908;
+
+TIME STAMP
+----------
+
+Date and time: Fri Oct  8 17:45:09 2021
+Total CPU time used: 357.588 seconds (0h:5m:57s)
+Total wall-clock time used: 181.967 seconds (0h:3m:1s)
+

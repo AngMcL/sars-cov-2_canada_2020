@@ -1,0 +1,8 @@
+[M::main::0.004*1.34] loaded/built the index for 1 target sequence(s)
+[M::mm_mapopt_update::0.005*1.32] mid_occ = 3
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 1
+[M::mm_idx_stat::0.005*1.31] distinct minimizers: 5587 (99.93% are singletons); average occurrences: 1.004; average spacing: 5.332; total length: 29903
+[M::worker_pipeline::0.319*3.70] mapped 201 sequences
+[M::main] Version: 2.17-r974-dirty
+[M::main] CMD: minimap2 -t 4 --secondary=no --sam-hit-only -a -o /Users/angela/Desktop/git_local/sarscov2_canada_2020/00_cleanData/0aligned/fake.fasta.sam /Users/angela/.viralmsa/wuhan-hu-1.fasta_HASH_105c82802b67521950854a851fc6eefd/wuhan-hu-1.fasta.mmi /Users/angela/Desktop/git_local/sarscov2_canada_2020/00_cleanData/GISAID/fake.fasta
+[M::main] Real time: 0.321 sec; CPU: 1.184 sec; Peak RSS: 0.011 GB
