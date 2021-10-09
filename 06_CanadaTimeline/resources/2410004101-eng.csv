@@ -1,0 +1,29 @@
+﻿"International travellers entering or returning to Canada, by type of transport" 1 2 3 4 5 6 7
+"Monthly"
+"Table: 24-10-0041-01 (formerly CANSIM 427-0001)"
+"Geography: Canada, Province or territory"
+
+"","Canada",,,,
+"Traveller characteristics","September 2020","October 2020","November 2020","December 2020","January 2021"
+"","Persons",,,,
+"Total international travellers","1,010,470","1,039,232","961,840","1,046,105","1,047,375"
+"Total non-resident travellers","147,777","139,916","127,159","154,246","120,921"
+"Total Canadian residents","324,815","341,256","325,853","379,325","425,521"
+"Total other travellers 8 9","537,878","558,060","508,828","512,534","500,933"
+
+Symbol legend:
+
+Footnotes:
+1,"Covers the period 1972 to date monthly data. Prior to 1972 do not coincide with current definitions and methods of collection. Refer to publication 66-201 annual 1972 for further explanation. In 1976, Canadians returning from Hawaii were included in the United States whereas in previous years they were counted as returning from other countries."
+2,"Travel data for NEXUS Highway, which is a program designed to expedite the border clearance process for low-risk, pre-approved travellers into Canada and the United States, are now included. Monthly data has been revised back to January 2010 to reflect this change."
+3,"As of January 2014, improvements in data collection procedures at Rainbow Bridge have permitted a more accurate allocation of pedestrians entering Canada between Canadian residents and residents of Overseas countries, at this port."
+4,"In 2013, Statistics Canada updated the method used to estimate the number of same-day and overnight commercial plane trips made by United States residents entering Canada via one of the following three airports: Pearson (Toronto), Trudeau (Montréal) and Vancouver. This change created a break in the time series on the number of same-day and overnight commercial air trips made by American residents entering Quebec, Ontario and British Columbia. Please note that the methodological update does not affect the total number of United States residents travelling to Canada by commercial air. The 2013 and 2014 data on the number of same-day and overnight commercial air trips made by United States residents, however, have been revised."
+5,"Effective April 20, 2017, this table now includes separate numbers for Nunavut that are presented for data back to January 2000. Also, the port of entry Iqaluit, Nunavut is no longer included in the Yukon totals for data back to January 2000."
+6,"Data for Statistics Canada's Frontier Counts program are produced using administrative data received from the Canada Border Services Agency (CBSA) on all international travellers who have been cleared for entry or re-entry into Canada. This includes residents of Canada, the United States and overseas entering Canada from abroad. In 2017, the CBSA began introducing the electronic Primary Inspection Kiosk (PIK) system at airports in Canada. The PIK system replaces the E-311 Declaration Cards that are completed by international travellers to Canada. While awaiting receipt of PIK data, Statistics Canada prepared preliminary estimates for airports at which PIK has been deployed.  As of February 21, 2019, Frontier Counts data since May 2017 incorporate PIK data from the airports where the system has been implemented. PIK data for the months of 2018 had been incorporated since August 2018."
+7,"Starting with January 2019 data, Statistics Canada updated the method of determining trip durations for US residents travelling to Canada and Canadian residents returning from the United States by all modes of transportation except by automobile and by bus. This change affects the relative proportions of same-day/overnight travellers. Caution is therefore advised when comparing 2019 data with earlier time periods for these modes of transportation."
+8,"With the switch from E311 declaration cards to PIK there have been unexpected increases in numbers of immigrants reported at PIK airports. Users are advised to not rely on Frontier Counts figures of immigrants arriving at PIK airports and the totals to which they contribute where PIK airports are involved (since January 2018). Also, note that Statistics Canada no longer receives comprehensive data on returning former residents."
+9,With the switch from E311 declaration cards to PIK there have been unexpected increases in numbers of crew members reported at PIK airports. Use caution when analysing these series and the totals to which they contribute where PIK airports are involved (since January 2018).
+
+"How to cite: Statistics Canada. Table 24-10-0041-01 International travellers entering or returning to Canada, by type of transport"
+https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=2410004101
+DOI: https://doi.org/10.25318/2410004101-eng
