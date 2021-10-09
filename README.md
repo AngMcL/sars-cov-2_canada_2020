@@ -2,10 +2,10 @@
 Angela McLaughlin et al. 
 
 ## Description
-This repo contains the scripts needed to reproduce our analysis as described in the manuscript, 'Early introductions of SARS-CoV-2 sublineages into Canada drove the 2020 epidemic', in submission at eLife. Pre-print available at medRxiv doi:10.1101/2021.04.09.21255131v3
+Scripts needed to reproduce our analysis as described in the manuscript, 'Early introductions of SARS-CoV-2 sublineages into Canada drove the 2020 epidemic', in submission at eLife. Pre-print available at medRxiv doi:10.1101/2021.04.09.21255131v3
 
 ## Dependencies
-Note this pipeline was developed and tested on mac OX Catalina 10.15.7 (check work desktop also)
+Note this pipeline was developed and tested on mac OX Catalina 10.15.7 
 
 ### Programs
 * R version 4.0.3
@@ -20,9 +20,10 @@ ape 5.4-1 49, Biostrings 3.1.3 50, phytools 0.7-70 51, phangorn 2.5.5 52, forcat
 ### Python packages:
 * viralMSA.py https://github.com/niemasd/ViralMSA
 * minimap2
+* masking script from *****
 
-### Additional files from cloned repos
-* nextstrain: https://github.com/nextstrain/ncov/blob/master/defaults/exclude.txt
+### Additional files cloned from github
+* nextstrain exclude list: https://github.com/nextstrain/ncov/blob/master/defaults/exclude.txt
 * problematic sites: https://github.com/W-L/ProblematicSites_SARS-CoV2/blob/master/problematic_sites_sarsCov2.vcf
 
 ## Usage
@@ -32,5 +33,6 @@ The readme files in the individual subfolders 00 - 05 have details on running th
 * GISAID.org
 * Originating and contributing laboratories who contributed to GISAID database (4.1 million and counting on 2021-10-06)
 * Co-authors, including memebers of Canadian COVID-19 Genomics Network (CanCOGen) Consortium
-* The many software and package developers; see manuscript for full citations
+* The many software and package developers
+* See manuscript for full citations
 
