@@ -1,0 +1,24 @@
+{
+    "id": "EB26C195",
+    "path": "~/Desktop/git_local/SARSCOV2_Canada_2020_2/05_GIS/scripts/CanadaTransmissionMap.R",
+    "project_path": "scripts/CanadaTransmissionMap.R",
+    "type": "r_source",
+    "hash": "1716661798",
+    "contents": "",
+    "dirty": false,
+    "created": 1633978644834.0,
+    "source_on_save": true,
+    "relative_order": 2,
+    "properties": {
+        "cursorPosition": "492,15",
+        "scrollLine": "488"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1633995198,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1633995198494,
+    "read_only": false,
+    "read_only_alternatives": []
+}

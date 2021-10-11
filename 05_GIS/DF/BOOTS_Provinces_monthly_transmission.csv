@@ -1,0 +1,391 @@
+"","Province","month","Type","mean.n","sd.n"
+"1","Alberta","2020-01","Prop.USA",NA,NA
+"2","Alberta","2020-01","Prop.international",NA,NA
+"3","Alberta","2020-01","Prop.totalinternational",NA,NA
+"4","Alberta","2020-01","Prop.domestic",NA,NA
+"5","Alberta","2020-01","Prop.provincial",NA,NA
+"6","Alberta","2020-02","Prop.USA",NA,NA
+"7","Alberta","2020-02","Prop.international",NA,NA
+"8","Alberta","2020-02","Prop.totalinternational",NA,NA
+"9","Alberta","2020-02","Prop.domestic",NA,NA
+"10","Alberta","2020-02","Prop.provincial",NA,NA
+"11","Alberta","2020-03","Prop.USA",0.144398766700925,0.0048750426415751
+"12","Alberta","2020-03","Prop.international",0.19726618705036,0.00864507561772651
+"13","Alberta","2020-03","Prop.totalinternational",0.341664953751285,0.00377003297615141
+"14","Alberta","2020-03","Prop.domestic",0.206572456320658,0.00180376577738279
+"15","Alberta","2020-03","Prop.provincial",0.451762589928058,0.00557379875353418
+"16","Alberta","2020-04","Prop.USA",0.0058770485850541,0.000544155600499412
+"17","Alberta","2020-04","Prop.international",0.00937951374599563,0.00126629409963814
+"18","Alberta","2020-04","Prop.totalinternational",0.0152565623310497,0.000722138499138728
+"19","Alberta","2020-04","Prop.domestic",0.00872852566430237,0.000747655760592393
+"20","Alberta","2020-04","Prop.provincial",0.976014912004648,0.00146979425973112
+"21","Alberta","2020-05","Prop.USA",0.00619322518571075,0.00101645974606846
+"22","Alberta","2020-05","Prop.international",0.00033003300330033,0.00104365599345491
+"23","Alberta","2020-05","Prop.totalinternational",0.00652325818901108,2.71962473864471e-05
+"24","Alberta","2020-05","Prop.domestic",0.00326162909450554,1.35981236932236e-05
+"25","Alberta","2020-05","Prop.provincial",0.990215112716483,4.07943710796722e-05
+"26","Alberta","2020-06","Prop.USA",NA,NA
+"27","Alberta","2020-06","Prop.international",NA,NA
+"28","Alberta","2020-06","Prop.totalinternational",NA,NA
+"29","Alberta","2020-06","Prop.domestic",NA,NA
+"30","Alberta","2020-06","Prop.provincial",NA,NA
+"31","Alberta","2020-07","Prop.USA",0,0
+"32","Alberta","2020-07","Prop.international",0,0
+"33","Alberta","2020-07","Prop.totalinternational",0,0
+"34","Alberta","2020-07","Prop.domestic",0,0
+"35","Alberta","2020-07","Prop.provincial",1,0
+"36","Alberta","2020-08","Prop.USA",NA,NA
+"37","Alberta","2020-08","Prop.international",NA,NA
+"38","Alberta","2020-08","Prop.totalinternational",NA,NA
+"39","Alberta","2020-08","Prop.domestic",NA,NA
+"40","Alberta","2020-08","Prop.provincial",NA,NA
+"41","Alberta","2020-09","Prop.USA",NA,NA
+"42","Alberta","2020-09","Prop.international",NA,NA
+"43","Alberta","2020-09","Prop.totalinternational",NA,NA
+"44","Alberta","2020-09","Prop.domestic",NA,NA
+"45","Alberta","2020-09","Prop.provincial",NA,NA
+"46","Alberta","2020-10","Prop.USA",NA,NA
+"47","Alberta","2020-10","Prop.international",NA,NA
+"48","Alberta","2020-10","Prop.totalinternational",NA,NA
+"49","Alberta","2020-10","Prop.domestic",NA,NA
+"50","Alberta","2020-10","Prop.provincial",NA,NA
+"51","Alberta","2020-11","Prop.USA",NA,NA
+"52","Alberta","2020-11","Prop.international",NA,NA
+"53","Alberta","2020-11","Prop.totalinternational",NA,NA
+"54","Alberta","2020-11","Prop.domestic",NA,NA
+"55","Alberta","2020-11","Prop.provincial",NA,NA
+"56","Alberta","2020-12","Prop.USA",NA,NA
+"57","Alberta","2020-12","Prop.international",NA,NA
+"58","Alberta","2020-12","Prop.totalinternational",NA,NA
+"59","Alberta","2020-12","Prop.domestic",NA,NA
+"60","Alberta","2020-12","Prop.provincial",NA,NA
+"61","Alberta","2021-01","Prop.USA",NA,NA
+"62","Alberta","2021-01","Prop.international",NA,NA
+"63","Alberta","2021-01","Prop.totalinternational",NA,NA
+"64","Alberta","2021-01","Prop.domestic",NA,NA
+"65","Alberta","2021-01","Prop.provincial",NA,NA
+"66","British Columbia","2020-01","Prop.USA",NA,NA
+"67","British Columbia","2020-01","Prop.international",NA,NA
+"68","British Columbia","2020-01","Prop.totalinternational",NA,NA
+"69","British Columbia","2020-01","Prop.domestic",NA,NA
+"70","British Columbia","2020-01","Prop.provincial",NA,NA
+"71","British Columbia","2020-02","Prop.USA",0.0166666666666667,0.052704627669473
+"72","British Columbia","2020-02","Prop.international",0.166666666666667,0
+"73","British Columbia","2020-02","Prop.totalinternational",0.183333333333333,0.052704627669473
+"74","British Columbia","2020-02","Prop.domestic",0,0
+"75","British Columbia","2020-02","Prop.provincial",0.816666666666667,0.052704627669473
+"76","British Columbia","2020-03","Prop.USA",0.256609677419355,0.00192796928313491
+"77","British Columbia","2020-03","Prop.international",0.15531935483871,0.00215238898805009
+"78","British Columbia","2020-03","Prop.totalinternational",0.411929032258064,0.000224419704915161
+"79","British Columbia","2020-03","Prop.domestic",0.0240193548387097,6.12053740677747e-05
+"80","British Columbia","2020-03","Prop.provincial",0.564051612903226,0.000163214330847434
+"81","British Columbia","2020-04","Prop.USA",0.0878254352588493,0.000980805592742182
+"82","British Columbia","2020-04","Prop.international",0.0373008186325378,4.01072918965198e-05
+"83","British Columbia","2020-04","Prop.totalinternational",0.125126253891387,0.00094069830084566
+"84","British Columbia","2020-04","Prop.domestic",0.0528951919750951,0.00424408070614089
+"85","British Columbia","2020-04","Prop.provincial",0.821978554133518,0.00518477900698658
+"86","British Columbia","2020-05","Prop.USA",0.0264705882352941,0.00930081664755406
+"87","British Columbia","2020-05","Prop.international",0.0323529411764706,0.00930081664755406
+"88","British Columbia","2020-05","Prop.totalinternational",0.0588235294117647,0
+"89","British Columbia","2020-05","Prop.domestic",0,0
+"90","British Columbia","2020-05","Prop.provincial",0.941176470588235,0
+"91","British Columbia","2020-06","Prop.USA",NA,NA
+"92","British Columbia","2020-06","Prop.international",NA,NA
+"93","British Columbia","2020-06","Prop.totalinternational",NA,NA
+"94","British Columbia","2020-06","Prop.domestic",NA,NA
+"95","British Columbia","2020-06","Prop.provincial",NA,NA
+"96","British Columbia","2020-07","Prop.USA",NA,NA
+"97","British Columbia","2020-07","Prop.international",NA,NA
+"98","British Columbia","2020-07","Prop.totalinternational",NA,NA
+"99","British Columbia","2020-07","Prop.domestic",NA,NA
+"100","British Columbia","2020-07","Prop.provincial",NA,NA
+"101","British Columbia","2020-08","Prop.USA",NA,NA
+"102","British Columbia","2020-08","Prop.international",NA,NA
+"103","British Columbia","2020-08","Prop.totalinternational",NA,NA
+"104","British Columbia","2020-08","Prop.domestic",NA,NA
+"105","British Columbia","2020-08","Prop.provincial",NA,NA
+"106","British Columbia","2020-09","Prop.USA",NA,NA
+"107","British Columbia","2020-09","Prop.international",NA,NA
+"108","British Columbia","2020-09","Prop.totalinternational",NA,NA
+"109","British Columbia","2020-09","Prop.domestic",NA,NA
+"110","British Columbia","2020-09","Prop.provincial",NA,NA
+"111","British Columbia","2020-10","Prop.USA",0.0112359550561798,0
+"112","British Columbia","2020-10","Prop.international",0.0112359550561798,0
+"113","British Columbia","2020-10","Prop.totalinternational",0.0224719101123595,0
+"114","British Columbia","2020-10","Prop.domestic",0.0314606741573034,0.00710624193296265
+"115","British Columbia","2020-10","Prop.provincial",0.946067415730337,0.00710624193296267
+"116","British Columbia","2020-11","Prop.USA",0.00348258706467662,0.0110129072742182
+"117","British Columbia","2020-11","Prop.international",0.00986201994951352,3.10004427141962e-05
+"118","British Columbia","2020-11","Prop.totalinternational",0.0133446070141901,0.0110439077169324
+"119","British Columbia","2020-11","Prop.domestic",0.0394480797980541,0.000124001770856785
+"120","British Columbia","2020-11","Prop.provincial",0.947207313187756,0.0111679094877892
+"121","British Columbia","2020-12","Prop.USA",NA,NA
+"122","British Columbia","2020-12","Prop.international",NA,NA
+"123","British Columbia","2020-12","Prop.totalinternational",NA,NA
+"124","British Columbia","2020-12","Prop.domestic",NA,NA
+"125","British Columbia","2020-12","Prop.provincial",NA,NA
+"126","British Columbia","2021-01","Prop.USA",0,0
+"127","British Columbia","2021-01","Prop.international",1,0
+"128","British Columbia","2021-01","Prop.totalinternational",1,0
+"129","British Columbia","2021-01","Prop.domestic",0,0
+"130","British Columbia","2021-01","Prop.provincial",0,0
+"131","Manitoba","2020-01","Prop.USA",NA,NA
+"132","Manitoba","2020-01","Prop.international",NA,NA
+"133","Manitoba","2020-01","Prop.totalinternational",NA,NA
+"134","Manitoba","2020-01","Prop.domestic",NA,NA
+"135","Manitoba","2020-01","Prop.provincial",NA,NA
+"136","Manitoba","2020-02","Prop.USA",NA,NA
+"137","Manitoba","2020-02","Prop.international",NA,NA
+"138","Manitoba","2020-02","Prop.totalinternational",NA,NA
+"139","Manitoba","2020-02","Prop.domestic",NA,NA
+"140","Manitoba","2020-02","Prop.provincial",NA,NA
+"141","Manitoba","2020-03","Prop.USA",0.271285514671635,0.00203748677064101
+"142","Manitoba","2020-03","Prop.international",0.159804378202143,0.00603881621177939
+"143","Manitoba","2020-03","Prop.totalinternational",0.431089892873777,0.00400132944113838
+"144","Manitoba","2020-03","Prop.domestic",0.289729855612483,0.000810085101580162
+"145","Manitoba","2020-03","Prop.provincial",0.27918025151374,0.00481141454271853
+"146","Manitoba","2020-04","Prop.USA",0.0666666666666667,0
+"147","Manitoba","2020-04","Prop.international",0.0333333333333333,0
+"148","Manitoba","2020-04","Prop.totalinternational",0.1,0
+"149","Manitoba","2020-04","Prop.domestic",0.103333333333333,0.0105409255338946
+"150","Manitoba","2020-04","Prop.provincial",0.796666666666667,0.0105409255338946
+"151","Manitoba","2020-05","Prop.USA",0,0
+"152","Manitoba","2020-05","Prop.international",0,0
+"153","Manitoba","2020-05","Prop.totalinternational",0,0
+"154","Manitoba","2020-05","Prop.domestic",0,0
+"155","Manitoba","2020-05","Prop.provincial",1,0
+"156","Manitoba","2020-06","Prop.USA",0,0
+"157","Manitoba","2020-06","Prop.international",0,0
+"158","Manitoba","2020-06","Prop.totalinternational",0,0
+"159","Manitoba","2020-06","Prop.domestic",0.166666666666667,0
+"160","Manitoba","2020-06","Prop.provincial",0.833333333333333,0
+"161","Manitoba","2020-07","Prop.USA",0.1,0.00390404649403504
+"162","Manitoba","2020-07","Prop.international",0.0246913580246914,0
+"163","Manitoba","2020-07","Prop.totalinternational",0.124691358024691,0.00390404649403504
+"164","Manitoba","2020-07","Prop.domestic",0,0
+"165","Manitoba","2020-07","Prop.provincial",0.875308641975309,0.00390404649403505
+"166","Manitoba","2020-08","Prop.USA",0.0217549984132022,5.01789536681754e-05
+"167","Manitoba","2020-08","Prop.international",0,0
+"168","Manitoba","2020-08","Prop.totalinternational",0.0217549984132022,5.01789536681754e-05
+"169","Manitoba","2020-08","Prop.domestic",0.00725166613773405,1.67263178893915e-05
+"170","Manitoba","2020-08","Prop.provincial",0.970993335449064,6.69052715575496e-05
+"171","Manitoba","2020-09","Prop.USA",0,0
+"172","Manitoba","2020-09","Prop.international",0.08,0
+"173","Manitoba","2020-09","Prop.totalinternational",0.08,0
+"174","Manitoba","2020-09","Prop.domestic",0,0
+"175","Manitoba","2020-09","Prop.provincial",0.92,0
+"176","Manitoba","2020-10","Prop.USA",NA,NA
+"177","Manitoba","2020-10","Prop.international",NA,NA
+"178","Manitoba","2020-10","Prop.totalinternational",NA,NA
+"179","Manitoba","2020-10","Prop.domestic",NA,NA
+"180","Manitoba","2020-10","Prop.provincial",NA,NA
+"181","Manitoba","2020-11","Prop.USA",0,0
+"182","Manitoba","2020-11","Prop.international",0,0
+"183","Manitoba","2020-11","Prop.totalinternational",0,0
+"184","Manitoba","2020-11","Prop.domestic",0.0437326549491212,0.00372979094978232
+"185","Manitoba","2020-11","Prop.provincial",0.956267345050879,0.00372979094978234
+"186","Manitoba","2020-12","Prop.USA",NA,NA
+"187","Manitoba","2020-12","Prop.international",NA,NA
+"188","Manitoba","2020-12","Prop.totalinternational",NA,NA
+"189","Manitoba","2020-12","Prop.domestic",NA,NA
+"190","Manitoba","2020-12","Prop.provincial",NA,NA
+"191","Manitoba","2021-01","Prop.USA",NA,NA
+"192","Manitoba","2021-01","Prop.international",NA,NA
+"193","Manitoba","2021-01","Prop.totalinternational",NA,NA
+"194","Manitoba","2021-01","Prop.domestic",NA,NA
+"195","Manitoba","2021-01","Prop.provincial",NA,NA
+"196","Maritimes","2020-01","Prop.USA",NA,NA
+"197","Maritimes","2020-01","Prop.international",NA,NA
+"198","Maritimes","2020-01","Prop.totalinternational",NA,NA
+"199","Maritimes","2020-01","Prop.domestic",NA,NA
+"200","Maritimes","2020-01","Prop.provincial",NA,NA
+"201","Maritimes","2020-02","Prop.USA",NA,NA
+"202","Maritimes","2020-02","Prop.international",NA,NA
+"203","Maritimes","2020-02","Prop.totalinternational",NA,NA
+"204","Maritimes","2020-02","Prop.domestic",NA,NA
+"205","Maritimes","2020-02","Prop.provincial",NA,NA
+"206","Maritimes","2020-03","Prop.USA",0.238368121442125,0.00108009483649015
+"207","Maritimes","2020-03","Prop.international",0.230600885515497,0.00524046013260035
+"208","Maritimes","2020-03","Prop.totalinternational",0.468969006957622,0.00632055496909049
+"209","Maritimes","2020-03","Prop.domestic",0.133776091081594,0.0150013171734743
+"210","Maritimes","2020-03","Prop.provincial",0.397254901960784,0.00868076220438379
+"211","Maritimes","2020-04","Prop.USA",0.0237783727156326,0.0055017471882183
+"212","Maritimes","2020-04","Prop.international",0.0138051449191014,9.81578445712452e-05
+"213","Maritimes","2020-04","Prop.totalinternational",0.037583517634734,0.00559990503278954
+"214","Maritimes","2020-04","Prop.domestic",0.0162844837620766,0.000772993025998556
+"215","Maritimes","2020-04","Prop.provincial",0.946131998603189,0.004826912006791
+"216","Maritimes","2020-05","Prop.USA",0,0
+"217","Maritimes","2020-05","Prop.international",0,0
+"218","Maritimes","2020-05","Prop.totalinternational",0,0
+"219","Maritimes","2020-05","Prop.domestic",0,0
+"220","Maritimes","2020-05","Prop.provincial",1,0
+"221","Maritimes","2020-06","Prop.USA",NA,NA
+"222","Maritimes","2020-06","Prop.international",NA,NA
+"223","Maritimes","2020-06","Prop.totalinternational",NA,NA
+"224","Maritimes","2020-06","Prop.domestic",NA,NA
+"225","Maritimes","2020-06","Prop.provincial",NA,NA
+"226","Maritimes","2020-07","Prop.USA",NA,NA
+"227","Maritimes","2020-07","Prop.international",NA,NA
+"228","Maritimes","2020-07","Prop.totalinternational",NA,NA
+"229","Maritimes","2020-07","Prop.domestic",NA,NA
+"230","Maritimes","2020-07","Prop.provincial",NA,NA
+"231","Maritimes","2020-08","Prop.USA",NA,NA
+"232","Maritimes","2020-08","Prop.international",NA,NA
+"233","Maritimes","2020-08","Prop.totalinternational",NA,NA
+"234","Maritimes","2020-08","Prop.domestic",NA,NA
+"235","Maritimes","2020-08","Prop.provincial",NA,NA
+"236","Maritimes","2020-09","Prop.USA",NA,NA
+"237","Maritimes","2020-09","Prop.international",NA,NA
+"238","Maritimes","2020-09","Prop.totalinternational",NA,NA
+"239","Maritimes","2020-09","Prop.domestic",NA,NA
+"240","Maritimes","2020-09","Prop.provincial",NA,NA
+"241","Maritimes","2020-10","Prop.USA",NA,NA
+"242","Maritimes","2020-10","Prop.international",NA,NA
+"243","Maritimes","2020-10","Prop.totalinternational",NA,NA
+"244","Maritimes","2020-10","Prop.domestic",NA,NA
+"245","Maritimes","2020-10","Prop.provincial",NA,NA
+"246","Maritimes","2020-11","Prop.USA",NA,NA
+"247","Maritimes","2020-11","Prop.international",NA,NA
+"248","Maritimes","2020-11","Prop.totalinternational",NA,NA
+"249","Maritimes","2020-11","Prop.domestic",NA,NA
+"250","Maritimes","2020-11","Prop.provincial",NA,NA
+"251","Maritimes","2020-12","Prop.USA",NA,NA
+"252","Maritimes","2020-12","Prop.international",NA,NA
+"253","Maritimes","2020-12","Prop.totalinternational",NA,NA
+"254","Maritimes","2020-12","Prop.domestic",NA,NA
+"255","Maritimes","2020-12","Prop.provincial",NA,NA
+"256","Maritimes","2021-01","Prop.USA",NA,NA
+"257","Maritimes","2021-01","Prop.international",NA,NA
+"258","Maritimes","2021-01","Prop.totalinternational",NA,NA
+"259","Maritimes","2021-01","Prop.domestic",NA,NA
+"260","Maritimes","2021-01","Prop.provincial",NA,NA
+"261","Ontario","2020-01","Prop.USA",0,0
+"262","Ontario","2020-01","Prop.international",1,0
+"263","Ontario","2020-01","Prop.totalinternational",1,0
+"264","Ontario","2020-01","Prop.domestic",0,0
+"265","Ontario","2020-01","Prop.provincial",0,0
+"266","Ontario","2020-02","Prop.USA",0.5,0
+"267","Ontario","2020-02","Prop.international",0,0
+"268","Ontario","2020-02","Prop.totalinternational",0.5,0
+"269","Ontario","2020-02","Prop.domestic",0,0
+"270","Ontario","2020-02","Prop.provincial",0.5,0
+"271","Ontario","2020-03","Prop.USA",0.249935790212054,0.00937438809958727
+"272","Ontario","2020-03","Prop.international",0.17753790535801,0.00380674551331984
+"273","Ontario","2020-03","Prop.totalinternational",0.427473695570064,0.00556764258626743
+"274","Ontario","2020-03","Prop.domestic",0.0893454918253925,0.00361052151778789
+"275","Ontario","2020-03","Prop.provincial",0.483180812604543,0.0091781641040553
+"276","Ontario","2020-04","Prop.USA",0.108463251670379,0.00211288039654903
+"277","Ontario","2020-04","Prop.international",0.0848552338530067,0.000704293465516344
+"278","Ontario","2020-04","Prop.totalinternational",0.193318485523385,0.00140858693103269
+"279","Ontario","2020-04","Prop.domestic",0.0365256124721604,0.00281717386206537
+"280","Ontario","2020-04","Prop.provincial",0.770155902004454,0.00140858693103266
+"281","Ontario","2020-05","Prop.USA",0.10015625,0.000494105884401308
+"282","Ontario","2020-05","Prop.international",0.0315985576923077,0.00262256200182233
+"283","Ontario","2020-05","Prop.totalinternational",0.131754807692308,0.00311666788622364
+"284","Ontario","2020-05","Prop.domestic",0.0685576923076923,0.00212845611742103
+"285","Ontario","2020-05","Prop.provincial",0.7996875,0.000988211768802633
+"286","Ontario","2020-06","Prop.USA",0.0183232093985715,0.00144242022191335
+"287","Ontario","2020-06","Prop.international",0.0328950003337561,9.85067468623753e-05
+"288","Ontario","2020-06","Prop.totalinternational",0.0512182097323276,0.00134391347505098
+"289","Ontario","2020-06","Prop.domestic",0,0
+"290","Ontario","2020-06","Prop.provincial",0.948781790267672,0.00134391347505095
+"291","Ontario","2020-07","Prop.USA",0.0656830601092896,0.000345604115865395
+"292","Ontario","2020-07","Prop.international",0.0328415300546448,0.000172802057932698
+"293","Ontario","2020-07","Prop.totalinternational",0.0985245901639344,0.000518406173798097
+"294","Ontario","2020-07","Prop.domestic",0.0492622950819672,0.000259203086899049
+"295","Ontario","2020-07","Prop.provincial",0.852213114754098,0.000777609260697133
+"296","Ontario","2020-08","Prop.USA",0.0424778761061947,0.00559695161091749
+"297","Ontario","2020-08","Prop.international",0.0628318584070796,0.00279847580545874
+"298","Ontario","2020-08","Prop.totalinternational",0.105309734513274,0.00279847580545874
+"299","Ontario","2020-08","Prop.domestic",0.0610619469026549,0.00279847580545874
+"300","Ontario","2020-08","Prop.provincial",0.833628318584071,0.00559695161091749
+"301","Ontario","2020-09","Prop.USA",0.0269758141306418,0.00352300977185013
+"302","Ontario","2020-09","Prop.international",0.0230495778581857,0.00182674580762599
+"303","Ontario","2020-09","Prop.totalinternational",0.0500253919888275,0.00169626396422413
+"304","Ontario","2020-09","Prop.domestic",0.0162984828286676,0.00175648635348653
+"305","Ontario","2020-09","Prop.provincial",0.933676125182505,0.00345275031771067
+"306","Ontario","2020-10","Prop.USA",0,0
+"307","Ontario","2020-10","Prop.international",0.0303977272727273,0.000299458111758369
+"308","Ontario","2020-10","Prop.totalinternational",0.0303977272727273,0.000299458111758369
+"309","Ontario","2020-10","Prop.domestic",0,0
+"310","Ontario","2020-10","Prop.provincial",0.969602272727273,0.000299458111758378
+"311","Ontario","2020-11","Prop.USA",0.022570336776686,0.000383765114549703
+"312","Ontario","2020-11","Prop.international",0.0120492147476274,0.000618804648374261
+"313","Ontario","2020-11","Prop.totalinternational",0.0346195515243134,0.000235039533824559
+"314","Ontario","2020-11","Prop.domestic",0.00408499202149996,1.06232557660817e-05
+"315","Ontario","2020-11","Prop.provincial",0.961295456454187,0.000224416278058477
+"316","Ontario","2020-12","Prop.USA",0.01303739087465,0.000685828625578713
+"317","Ontario","2020-12","Prop.international",0.0196631526931313,0.00136731656365376
+"318","Ontario","2020-12","Prop.totalinternational",0.0327005435677813,0.00205314518923248
+"319","Ontario","2020-12","Prop.domestic",0.00427441937077911,2.89379166910843e-06
+"320","Ontario","2020-12","Prop.provincial",0.96302503706144,0.00205603898090159
+"321","Ontario","2021-01","Prop.USA",0.0287917271407837,0.000172112354508439
+"322","Ontario","2021-01","Prop.international",0.0220246734397678,0.00883510086476652
+"323","Ontario","2021-01","Prop.totalinternational",0.0508164005805515,0.00866298851025808
+"324","Ontario","2021-01","Prop.domestic",0,0
+"325","Ontario","2021-01","Prop.provincial",0.949183599419448,0.00866298851025806
+"326","Quebec","2020-01","Prop.USA",NA,NA
+"327","Quebec","2020-01","Prop.international",NA,NA
+"328","Quebec","2020-01","Prop.totalinternational",NA,NA
+"329","Quebec","2020-01","Prop.domestic",NA,NA
+"330","Quebec","2020-01","Prop.provincial",NA,NA
+"331","Quebec","2020-02","Prop.USA",NA,NA
+"332","Quebec","2020-02","Prop.international",NA,NA
+"333","Quebec","2020-02","Prop.totalinternational",NA,NA
+"334","Quebec","2020-02","Prop.domestic",NA,NA
+"335","Quebec","2020-02","Prop.provincial",NA,NA
+"336","Quebec","2020-03","Prop.USA",0.221303978590681,0.00338905096966336
+"337","Quebec","2020-03","Prop.international",0.146332110911315,0.00679431821934433
+"338","Quebec","2020-03","Prop.totalinternational",0.367636089501996,0.0101833691890077
+"339","Quebec","2020-03","Prop.domestic",0.0221825984104041,0.00244683963443408
+"340","Quebec","2020-03","Prop.provincial",0.6101813120876,0.00773652955457362
+"341","Quebec","2020-04","Prop.USA",0.17913973826211,0.00641948445185829
+"342","Quebec","2020-04","Prop.international",0.0165864499989663,0.00282891427061725
+"343","Quebec","2020-04","Prop.totalinternational",0.195726188261076,0.00359057018124103
+"344","Quebec","2020-04","Prop.domestic",0.0100016539519113,5.03412061098979e-05
+"345","Quebec","2020-04","Prop.provincial",0.794272157787012,0.00354022897513115
+"346","Quebec","2020-05","Prop.USA",0.0253625134264232,0.000948230411883644
+"347","Quebec","2020-05","Prop.international",0.0150644468313641,8.49161562880877e-05
+"348","Quebec","2020-05","Prop.totalinternational",0.0404269602577873,0.00103314656817173
+"349","Quebec","2020-05","Prop.domestic",0,0
+"350","Quebec","2020-05","Prop.provincial",0.959573039742213,0.00103314656817174
+"351","Quebec","2020-06","Prop.USA",0.0357792207792208,0.000205342705205739
+"352","Quebec","2020-06","Prop.international",0.0894480519480519,0.000513356763014347
+"353","Quebec","2020-06","Prop.totalinternational",0.125227272727273,0.000718699468220082
+"354","Quebec","2020-06","Prop.domestic",0,0
+"355","Quebec","2020-06","Prop.provincial",0.874772727272727,0.0007186994682201
+"356","Quebec","2020-07","Prop.USA",0.0263157894736842,0
+"357","Quebec","2020-07","Prop.international",0,0
+"358","Quebec","2020-07","Prop.totalinternational",0.0263157894736842,0
+"359","Quebec","2020-07","Prop.domestic",0.0271929824561403,0.00277392777207753
+"360","Quebec","2020-07","Prop.provincial",0.946491228070175,0.0027739277720775
+"361","Quebec","2020-08","Prop.USA",0.00814351945172344,4.24951644180389e-05
+"362","Quebec","2020-08","Prop.international",0.0162870389034469,8.49903288360778e-05
+"363","Quebec","2020-08","Prop.totalinternational",0.0244305583551703,0.000127485493254117
+"364","Quebec","2020-08","Prop.domestic",0.00814351945172344,4.24951644180389e-05
+"365","Quebec","2020-08","Prop.provincial",0.967425922193106,0.000169980657672171
+"366","Quebec","2020-09","Prop.USA",0,0
+"367","Quebec","2020-09","Prop.international",0.0626329787234043,0.000420515646298985
+"368","Quebec","2020-09","Prop.totalinternational",0.0626329787234043,0.000420515646298985
+"369","Quebec","2020-09","Prop.domestic",0,0
+"370","Quebec","2020-09","Prop.provincial",0.937367021276596,0.000420515646298981
+"371","Quebec","2020-10","Prop.USA",NA,NA
+"372","Quebec","2020-10","Prop.international",NA,NA
+"373","Quebec","2020-10","Prop.totalinternational",NA,NA
+"374","Quebec","2020-10","Prop.domestic",NA,NA
+"375","Quebec","2020-10","Prop.provincial",NA,NA
+"376","Quebec","2020-11","Prop.USA",NA,NA
+"377","Quebec","2020-11","Prop.international",NA,NA
+"378","Quebec","2020-11","Prop.totalinternational",NA,NA
+"379","Quebec","2020-11","Prop.domestic",NA,NA
+"380","Quebec","2020-11","Prop.provincial",NA,NA
+"381","Quebec","2020-12","Prop.USA",0,0
+"382","Quebec","2020-12","Prop.international",1,0
+"383","Quebec","2020-12","Prop.totalinternational",1,0
+"384","Quebec","2020-12","Prop.domestic",0,0
+"385","Quebec","2020-12","Prop.provincial",0,0
+"386","Quebec","2021-01","Prop.USA",NA,NA
+"387","Quebec","2021-01","Prop.international",NA,NA
+"388","Quebec","2021-01","Prop.totalinternational",NA,NA
+"389","Quebec","2021-01","Prop.domestic",NA,NA
+"390","Quebec","2021-01","Prop.provincial",NA,NA
