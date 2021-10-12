@@ -4,6 +4,8 @@ Angela McLaughlin et al.
 ## Description
 Scripts needed to reproduce our analysis as described in the manuscript, 'Early introductions of SARS-CoV-2 sublineages into Canada drove the 2020 epidemic', in submission at eLife. Pre-print available at medRxiv doi:10.1101/2021.04.09.21255131v3
 
+Since we are not allowed to share GISAID data publicly, a fake dataset of SARS-CoV-2 sequences simulated from a Wuhan-hu-1 origin was run through the pipeline in lieu.
+
 ## Dependencies
 Note this pipeline was developed and tested on mac OX Catalina 10.15.7 
 
