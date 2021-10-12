@@ -23,5 +23,3 @@ Max likelihood inference of the ancestral geographic state of internal nodes in 
 * Make phylogeny figure
     $Rscript scripts/PlotTreeFigures.R
     * note that the new ggtree version is not playing nicely
-
-* Nice add on: summary report for each sublineage: subtree, sublin characteristics, intro, spread, etc

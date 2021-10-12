@@ -15,14 +15,14 @@ Note this pipeline was developed and tested on mac OX Catalina 10.15.7
 * FastTree v2.2.1 
 * IQTREE-2.1.2 (includes LSD2)
 * TempEst v1.5 
+* minimap2 
 
 ### R packages:
 ape 5.4-1 49, Biostrings 3.1.3 50, phytools 0.7-70 51, phangorn 2.5.5 52, forcats 0.5.0 53, coronavirus 0.3.0.9000 8, dplyr 1.0.2 54, tidyr 1.1.2 55, plyr 1.8.6 56, lubridate 1.7.9.2 57, stringr 1.4.0 58, stringi 1.5.3 59, zoo 1.8-8 60, ggplot2 3.3.3 61, RColorBrewer 1.1-2 62, ochRe 1.0.0 63, cowplot 1.1.164, ggstance 0.3.5 65, ggalluvial 0.12.3 66, ggmosaic 0.3_3 67, ggtree 2.2.4 68, ggplotify 0.0.5 69, ggrepel 0.9.1 70, and MASS 7.3-53 46. Additional R packages used to generate the maps included rgeos 0.5-5 71, maptools 1.0-2 72, ggsn 0.5.0 73, broom 0.7.6 74, and rgdal 1.5-18 75.
 
-### Python packages:
+### Python packages/scripts:
 * viralMSA.py https://github.com/niemasd/ViralMSA
-* minimap2
-* masking script from *****
+* masking script from https://github.com/W-L/ProblematicSites_SARS-CoV2/blob/master/src/mask_alignment_using_vcf.py
 
 ### Additional files cloned from github
 * nextstrain exclude list: https://github.com/nextstrain/ncov/blob/master/defaults/exclude.txt
