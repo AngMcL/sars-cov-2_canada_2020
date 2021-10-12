@@ -1,0 +1,95 @@
+"tip.id","tip.label","tip.state","par.id","par.state","par.lik"
+1,"Canada/fake_169/2021/EPI_ISL_FAKE_169/2021-02-07","Canada_Ontario",224,"Canada_Quebec",0.400008425820761
+2,"Canada/fake_146/2021/EPI_ISL_FAKE_146/2021-02-01","Canada_Ontario",228,"Canada_Quebec",0.872626354829991
+3,"Canada/fake_48/2020/EPI_ISL_FAKE_48/2020-12-12","Canada_Quebec",227,"Canada_Quebec",0.872626360518831
+4,"Canada/fake_53/2020/EPI_ISL_FAKE_53/2020-12-14","Canada_Quebec",229,"Canada_Quebec",0.876292283027315
+5,"Canada/fake_127/2021/EPI_ISL_FAKE_127/2021-01-25","Canada_Ontario",230,"Canada_Ontario",0.559800257361303
+7,"Canada/fake_164/2021/EPI_ISL_FAKE_164/2021-02-06","Canada_Ontario",235,"Canada_Ontario",0.927650182251181
+8,"Canada/fake_167/2021/EPI_ISL_FAKE_167/2021-02-06","Canada_Ontario",235,"Canada_Ontario",0.927650182251181
+9,"Canada/fake_67/2020/EPI_ISL_FAKE_67/2020-12-26","Canada_Quebec",225,"Canada_Quebec",0.712905609255544
+13,"Canada/fake_115/2021/EPI_ISL_FAKE_115/2021-01-22","Canada_Manitoba",233,"Portugal",0.879329889533223
+14,"Canada/fake_84/2021/EPI_ISL_FAKE_84/2021-01-07","Canada_Nova Scotia",234,"Canada_Quebec",0.400008242927309
+15,"Canada/fake_4/2020/EPI_ISL_FAKE_4/2020-08-01","Canada_British Columbia",221,"Canada_British Columbia",0.980562744923377
+16,"Canada/fake_3/2020/EPI_ISL_FAKE_3/2020-07-13","Canada_British Columbia",221,"Canada_British Columbia",0.980562744923377
+18,"Canada/fake_21/2020/EPI_ISL_FAKE_21/2020-10-26","Canada_Quebec",238,"Canada_Ontario",0.716424352911819
+19,"Canada/fake_106/2021/EPI_ISL_FAKE_106/2021-01-17","Canada_Ontario",239,"Canada_Ontario",0.792433780266868
+20,"Canada/fake_174/2021/EPI_ISL_FAKE_174/2021-02-08","Canada_Ontario",239,"Canada_Ontario",0.792433780266868
+21,"Canada/fake_55/2020/EPI_ISL_FAKE_55/2020-12-14","Canada_Quebec",241,"Canada_Ontario",0.665032006507765
+22,"Canada/fake_32/2020/EPI_ISL_FAKE_32/2020-11-16","Canada_Ontario",240,"Canada_Ontario",0.665032161267261
+27,"Canada/fake_16/2020/EPI_ISL_FAKE_16/2020-10-14","Canada_Ontario",245,"Canada_Ontario",0.868004550934386
+28,"Canada/fake_50/2020/EPI_ISL_FAKE_50/2020-12-12","Canada_Ontario",246,"Canada_Ontario",0.868004541277833
+29,"Canada/fake_38/2020/EPI_ISL_FAKE_38/2020-11-28","Canada_Nova Scotia",247,"Canada_Nova Scotia",0.544230859432229
+30,"Canada/fake_128/2021/EPI_ISL_FAKE_128/2021-01-25","Canada_Quebec",247,"Canada_Nova Scotia",0.544230859432229
+31,"Canada/fake_83/2021/EPI_ISL_FAKE_83/2021-01-07","Canada_Ontario",216,"Canada_Ontario",0.767861278323599
+33,"Canada/fake_87/2021/EPI_ISL_FAKE_87/2021-01-08","Canada_Alberta",215,"Canada_Ontario",0.299942668872131
+36,"Canada/fake_57/2020/EPI_ISL_FAKE_57/2020-12-17","Canada_Quebec",219,"Canada_Quebec",0.499639204834887
+37,"Canada/fake_166/2021/EPI_ISL_FAKE_166/2021-02-06","Canada_Ontario",219,"Canada_Quebec",0.499639204834887
+38,"Canada/fake_37/2020/EPI_ISL_FAKE_37/2020-11-24","Canada_New Brunswick",209,"Canada_Ontario",0.22205521404018
+39,"Canada/fake_56/2020/EPI_ISL_FAKE_56/2020-12-15","Canada_Quebec",210,"Canada_Quebec",0.771555822282295
+40,"Canada/fake_85/2021/EPI_ISL_FAKE_85/2021-01-08","Canada_Alberta",210,"Canada_Quebec",0.771555822282295
+44,"Canada/fake_8/2020/EPI_ISL_FAKE_8/2020-08-20","Canada_British Columbia",251,"Canada_British Columbia",0.501741918124179
+46,"Canada/fake_79/2021/EPI_ISL_FAKE_79/2021-01-05","Canada_Alberta",253,"Canada_Alberta",0.259997443709622
+47,"Canada/fake_91/2021/EPI_ISL_FAKE_91/2021-01-10","Canada_Alberta",254,"Canada_Alberta",0.391108469222975
+48,"Canada/fake_101/2021/EPI_ISL_FAKE_101/2021-01-16","Canada_Nova Scotia",254,"Canada_Alberta",0.391108469222975
+49,"Canada/fake_49/2020/EPI_ISL_FAKE_49/2020-12-12","Canada_Ontario",250,"Canada_Ontario",0.982357842114226
+50,"Canada/fake_161/2021/EPI_ISL_FAKE_161/2021-02-05","Canada_Ontario",250,"Canada_Ontario",0.982357842114226
+51,"Canada/fake_66/2020/EPI_ISL_FAKE_66/2020-12-24","Canada_Alberta",169,"USA",0.456293295597014
+53,"Canada/fake_27/2020/EPI_ISL_FAKE_27/2020-11-05","Canada_Quebec",171,"USA",0.411758728081766
+56,"Canada/fake_82/2021/EPI_ISL_FAKE_82/2021-01-05","Canada_Nova Scotia",173,"Canada_Nova Scotia",0.999999762346189
+57,"Canada/fake_173/2021/EPI_ISL_FAKE_173/2021-02-08","Canada_Ontario",174,"Canada_Ontario",0.995388196802155
+58,"Canada/fake_191/2021/EPI_ISL_FAKE_191/2021-02-13","Canada_Ontario",174,"Canada_Ontario",0.995388196802155
+60,"Canada/fake_63/2020/EPI_ISL_FAKE_63/2020-12-24","Canada_Ontario",177,"Canada_Ontario",0.997200649533399
+61,"Canada/fake_68/2020/EPI_ISL_FAKE_68/2020-12-26","Canada_Ontario",177,"Canada_Ontario",0.997200649533399
+62,"Canada/fake_44/2020/EPI_ISL_FAKE_44/2020-12-05","Canada_Quebec",176,"Thailand",0.305978188048557
+63,"Canada/fake_76/2021/EPI_ISL_FAKE_76/2021-01-03","Canada_Alberta",206,"Netherlands",0.296584600489104
+64,"Canada/fake_148/2021/EPI_ISL_FAKE_148/2021-02-02","Canada_Ontario",206,"Netherlands",0.296584600489104
+71,"Canada/fake_86/2021/EPI_ISL_FAKE_86/2021-01-08","Canada_Alberta",204,"Canada_Alberta",0.348732003813249
+72,"Canada/fake_175/2021/EPI_ISL_FAKE_175/2021-02-09","Canada_Ontario",204,"Canada_Alberta",0.348732003813249
+74,"Canada/fake_134/2021/EPI_ISL_FAKE_134/2021-01-27","Canada_Manitoba",188,"Russia",0.207690243087179
+75,"Canada/fake_42/2020/EPI_ISL_FAKE_42/2020-12-01","Canada_Quebec",189,"Canada_Quebec",0.258072868790008
+76,"Canada/fake_80/2021/EPI_ISL_FAKE_80/2021-01-05","Canada_Alberta",189,"Canada_Quebec",0.258072868790008
+77,"Canada/fake_33/2020/EPI_ISL_FAKE_33/2020-11-19","Canada_Manitoba",192,"Canada_Alberta",0.737173516844827
+78,"Canada/fake_171/2021/EPI_ISL_FAKE_171/2021-02-08","Canada_Ontario",193,"Canada_Alberta",0.767461873982418
+79,"Canada/fake_97/2021/EPI_ISL_FAKE_97/2021-01-14","Canada_Alberta",194,"Canada_Alberta",0.946974100836429
+80,"Canada/fake_100/2021/EPI_ISL_FAKE_100/2021-01-16","Canada_Alberta",194,"Canada_Alberta",0.946974100836429
+81,"Canada/fake_72/2020/EPI_ISL_FAKE_72/2020-12-29","Canada_Alberta",196,"Canada_Alberta",0.998915812115648
+82,"Canada/fake_77/2021/EPI_ISL_FAKE_77/2021-01-03","Canada_Alberta",196,"Canada_Alberta",0.998915812115648
+83,"Canada/fake_58/2020/EPI_ISL_FAKE_58/2020-12-18","Canada_British Columbia",198,"United Kingdom",0.407185683352263
+86,"Canada/fake_5/2020/EPI_ISL_FAKE_5/2020-08-01","Canada_Ontario",180,"Canada_Ontario",0.999836085215522
+87,"Canada/fake_6/2020/EPI_ISL_FAKE_6/2020-08-03","Canada_Ontario",180,"Canada_Ontario",0.999836085215522
+88,"Canada/fake_163/2021/EPI_ISL_FAKE_163/2021-02-05","Canada_Ontario",182,"Canada_Quebec",0.774935986094843
+89,"Canada/fake_46/2020/EPI_ISL_FAKE_46/2020-12-09","Canada_Quebec",183,"Canada_Quebec",0.774936091433323
+90,"Canada/fake_75/2021/EPI_ISL_FAKE_75/2021-01","Canada_Quebec",183,"Canada_Quebec",0.774936091433323
+91,"Canada/fake_109/2021/EPI_ISL_FAKE_109/2021-01-19","Canada_Ontario",184,"Canada_Ontario",0.712766880839604
+92,"Canada/fake_172/2021/EPI_ISL_FAKE_172/2021-02-08","Canada_Ontario",185,"Canada_Ontario",0.616408794855465
+96,"Canada/fake_93/2021/EPI_ISL_FAKE_93/2021-01-10","Canada_Alberta",164,"United Kingdom",0.318002436599164
+98,"Canada/fake_73/2020/EPI_ISL_FAKE_73/2020-12","Canada_Nova Scotia",158,"Canada_Quebec",0.459999586188733
+99,"Canada/fake_114/2021/EPI_ISL_FAKE_114/2021-01","Canada_Quebec",158,"Canada_Quebec",0.459999586188733
+101,"Canada/fake_45/2020/EPI_ISL_FAKE_45/2020-12-07","Canada_Quebec",160,"Canada_Quebec",0.672968278750047
+102,"Canada/fake_74/2021/EPI_ISL_FAKE_74/2021-01-02","Canada_Ontario",161,"Canada_Ontario",0.440776454425786
+104,"Canada/fake_12/2020/EPI_ISL_FAKE_12/2020-10-05","Canada_Quebec",152,"Canada_Quebec",0.922684665169794
+105,"Canada/fake_117/2021/EPI_ISL_FAKE_117/2021-01-22","Canada_Quebec",152,"Canada_Quebec",0.922684665169794
+106,"Canada/fake_61/2020/EPI_ISL_FAKE_61/2020-12-19","Canada_British Columbia",154,"Canada_Ontario",0.387147676284735
+107,"Canada/fake_147/2021/EPI_ISL_FAKE_147/2021-02-01","Canada_Ontario",154,"Canada_Ontario",0.387147676284735
+108,"Canada/fake_64/2020/EPI_ISL_FAKE_64/2020-12-24","Canada_British Columbia",155,"Canada_Ontario",0.546606069125357
+109,"Canada/fake_25/2020/EPI_ISL_FAKE_25/2020-10-30","Canada_Ontario",156,"Canada_Ontario",0.999999991515508
+110,"Canada/fake_162/2021/EPI_ISL_FAKE_162/2021-02-05","Canada_Ontario",156,"Canada_Ontario",0.999999991515508
+113,"Canada/fake_52/2020/EPI_ISL_FAKE_52/2020-12-13","Canada_Quebec",148,"United Kingdom",0.504429747848957
+114,"Canada/fake_126/2021/EPI_ISL_FAKE_126/2021-01-25","Canada_Ontario",148,"United Kingdom",0.504429747848957
+116,"Canada/fake_29/2020/EPI_ISL_FAKE_29/2020-11","Canada_Quebec",266,"USA",0.999999263656871
+117,"Canada/fake_39/2020/EPI_ISL_FAKE_39/2020-11-28","Canada_Quebec",280,"Canada_Quebec",0.910005337071363
+118,"Canada/fake_41/2020/EPI_ISL_FAKE_41/2020-11-29","Canada_Quebec",281,"Canada_Quebec",0.930247999606714
+119,"Canada/fake_60/2020/EPI_ISL_FAKE_60/2020-12-18","Canada_British Columbia",281,"Canada_Quebec",0.930247999606714
+121,"Canada/fake_160/2021/EPI_ISL_FAKE_160/2021-02-04","Canada_Ontario",261,"USA",0.393544325021494
+122,"Canada/fake_28/2020/EPI_ISL_FAKE_28/2020-11-05","Canada_Quebec",260,"Canada_Quebec",0.771543819868358
+123,"Canada/fake_81/2021/EPI_ISL_FAKE_81/2021-01-05","Canada_Alberta",259,"Canada_Quebec",0.77154380820478
+126,"Canada/fake_78/2021/EPI_ISL_FAKE_78/2021-01-04","Canada_Quebec",264,"Canada_Quebec",0.634844351834068
+127,"Canada/fake_135/2021/EPI_ISL_FAKE_135/2021-01-28","Canada_Manitoba",264,"Canada_Quebec",0.634844351834068
+129,"Canada/fake_59/2020/EPI_ISL_FAKE_59/2020-12-18","Canada_British Columbia",274,"Canada_Nova Scotia",0.376392741385877
+130,"Canada/fake_176/2021/EPI_ISL_FAKE_176/2021-02-09","Canada_Ontario",274,"Canada_Nova Scotia",0.376392741385877
+131,"Canada/fake_26/2020/EPI_ISL_FAKE_26/2020-11-02","Canada_Nova Scotia",273,"Canada_Nova Scotia",0.38321559765704
+132,"Canada/fake_165/2021/EPI_ISL_FAKE_165/2021-02-06","Canada_Ontario",273,"Canada_Nova Scotia",0.38321559765704
+133,"Canada/fake_30/2020/EPI_ISL_FAKE_30/2020-11-12","Canada_Newfoundland and Labrador",269,"Canada_Quebec",0.823350622265311
+134,"Canada/fake_10/2020/EPI_ISL_FAKE_10/2020-10-01","Canada_Quebec",270,"Canada_Quebec",0.823350627093714
+135,"Canada/fake_170/2021/EPI_ISL_FAKE_170/2021-02","Canada_Ontario",276,"United Kingdom",0.228744358657771
+140,"Canada/fake_13/2020/EPI_ISL_FAKE_13/2020-10-10","Canada_Quebec",278,"Canada_Quebec",0.99999991390358

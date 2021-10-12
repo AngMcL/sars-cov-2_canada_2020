@@ -19,3 +19,11 @@ See parent directory
         * for each bootstrap: 
             * bootsamples/subsamp_meta_*.csv 
             * bootsamples/subsamp_align_*.fasta
+
+## References
+**Provincial COVID-19 cases** 
+PHAC
+
+**Population counts**
+Statistics Canada, 2016 Census or real-time clock population model??
+
