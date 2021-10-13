@@ -6,7 +6,11 @@ Make pretty maps of 1) COVID-19 cases across Canadian provinces, 2) Relative con
 Make pretty maps using transmission data
    * Output: maps_out/\*
 ```console
+#Generally,
 $Rscript CanadaTransmissionMap.R <relative transmission table>
+
+#For example.
+$Rscript CanadaTransmissionMap.R "DF/BOOTS_Provinces_monthly_transmission.csv"
 ```
 
 ## References
