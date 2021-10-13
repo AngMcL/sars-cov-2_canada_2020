@@ -12,12 +12,14 @@
 See parent directory
 
 ## Usage
-* Add sequences (fasta) and metadata (tsv) to the GISAID folder or run 'fake.fasta' (as shown for scripts below)
+* Add sequences and metadata to the GISAID folder or run the example dataset, 'fake.fasta' as shown for scripts below
 
 * Change directory to 00_cleanData
 
 * Align sequences 
-    $ViralMSA.py -s GISAID/fake.fasta -r scripts/wuhan-hu-1.fasta -o aligned -a minimap2 -t 4 -e <your-email>
+```console
+foo@bar:~$ViralMSA.py -s GISAID/fake.fasta -r scripts/wuhan-hu-1.fasta -o aligned -a minimap2 -t 4 -e <your-email>
+```
     * output: aligned/fake.fasta.aln
 
 * Clean data
