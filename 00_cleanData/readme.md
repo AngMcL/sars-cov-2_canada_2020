@@ -40,7 +40,7 @@ $cd pangolin
 $conda activate pangolin
 $pangolin clean_fake.fasta
 $conda deactivate 
-$mv results.csv ~/sars-cov-2_canada_2020/00_cleanData/cleanded/pangolin_results.csv
+$mv results.csv ~/sars-cov-2_canada_2020/00_cleanData/cleaned/pangolin_results.csv
 ```
 
 * Mask problematic sites in the alignment, as per de Maio et al.
