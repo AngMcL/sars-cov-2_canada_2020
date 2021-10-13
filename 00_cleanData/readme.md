@@ -20,17 +20,16 @@ foo@bar:~$cd 00_cleanData
 ```
 
 * Align sequences 
+   * Output: aligned/fake.fasta.aln 
 ```console
 foo@bar:~$ViralMSA.py -s GISAID/fake.fasta -r scripts/wuhan-hu-1.fasta -o aligned -a minimap2 -t 4 -e <your-email>
 ```
 
-   * output: aligned/fake.fasta.aln
-
 * Clean data
-    $Rscript scripts/cleanAlignedGISAID.R aligned/fake.fasta.aln GISAID/fake_meta.tsv
-    * Outputs:
-        * cleaned/clean_fake.fasta
-        * cleaned/clean_fake_meta.csv
+   * Outputs: cleaned/clean_fake.fasta, cleaned/clean_fake_meta.csv
+```console
+foo@bar:~$Rscript scripts/cleanAlignedGISAID.R aligned/fake.fasta.aln GISAID/fake_meta.tsv
+```
 
 * Run pangolin on cleaned sequences pre-masking
     * Output: cleaned/pangolin_results.csv
@@ -38,5 +37,6 @@ foo@bar:~$ViralMSA.py -s GISAID/fake.fasta -r scripts/wuhan-hu-1.fasta -o aligne
 
 * Mask problematic sites in the alignment, as per de Maio et al.
     * Note that need to make sure the reference_id matches wuhan-hu-1 sequence
-
-    $python3 scripts/mask_alignment_using_vcf.py -i cleaned/clean_fake.fasta -o masked/mask_clean_fake.fasta -v scripts/problematic_sites_vcfv5.vcf -n "n" --reference_id "China/fake_1/2020/EPI_ISL_FAKE_1/2019-12-26"
+```console
+foo@bar:~$python3 scripts/mask_alignment_using_vcf.py -i cleaned/clean_fake.fasta -o masked/mask_clean_fake.fasta -v scripts/problematic_sites_vcfv5.vcf -n "n" --reference_id "China/fake_1/2020/EPI_ISL_FAKE_1/2019-12-26"
+```
