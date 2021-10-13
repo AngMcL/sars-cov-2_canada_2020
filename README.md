@@ -17,10 +17,10 @@ Note this pipeline was developed and tested on mac OX Catalina 10.15.7
 * TempEst v1.5 
 * minimap2 
 
-### R packages:
+### R packages
 ape 5.4-1, Biostrings 3.1.3, phytools 0.7-70, phangorn 2.5.5, forcats 0.5.0, coronavirus 0.3.0.9000, dplyr 1.0.2, tidyr 1.1.2, plyr 1.8.6, lubridate 1.7.9.2, stringr 1.4.8, stringi 1.5.3, zoo 1.8-8, ggplot2 3.3.3, RColorBrewer 1.1-2, ochRe 1.0.0, cowplot 1.1.164, ggstance 0.3.5, ggalluvial 0.12.3, ggmosaic 0.3_3, ggtree 2.2.4, ggplotify 0.0.5, ggrepel 0.9.1, and MASS 7.3-53. Additional R packages used to generate the maps included rgeos 0.5-5, maptools 1.0-2, ggsn 0.5.0, broom 0.7.6, and rgdal 1.5-18.
 
-### Python packages/scripts:
+### Python packages/scripts
 * viralMSA.py https://github.com/niemasd/ViralMSA
 * masking script from https://github.com/W-L/ProblematicSites_SARS-CoV2/blob/master/src/mask_alignment_using_vcf.py
 
