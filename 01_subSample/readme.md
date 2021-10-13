@@ -13,8 +13,8 @@ See parent directory
 ```console    
 $cd 01_subSample
 ```
-* subsample sequences, specifying the number of global sequences to sample
-* Outputs for each bootstrap: bootsamples/subsamp_meta_*.csv, bootsamples/subsamp_align_*.fasta
+* Subsample sequences, specifying the number of global sequences to sample
+   * Outputs for each bootstrap: bootsamples/subsamp_meta_\*.csv, bootsamples/subsamp_align_\*.fasta
 ```console    
 #generally,
 $Rscript scripts/subsample_n.R <"seq_in.fasta"> <"meta_in.csv"> <number of bootstraps> <number of total samples to take, must be greater than n Canada>
