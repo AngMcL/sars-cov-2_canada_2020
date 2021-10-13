@@ -12,6 +12,7 @@ Note this pipeline was developed and tested on mac OX Catalina 10.15.7
 ### Programs
 * R version 4.0.3
 * Python 3.8.5
+* pangolin v3.1.14 https://github.com/cov-lineages/pangolin
 * FastTree v2.2.1 
 * IQTREE-2.1.2 (includes LSD2)
 * TempEst v1.5 
@@ -22,14 +23,14 @@ ape 5.4-1, Biostrings 3.1.3, phytools 0.7-70, phangorn 2.5.5, forcats 0.5.0, cor
 
 ### Python packages/scripts
 * viralMSA.py https://github.com/niemasd/ViralMSA
-* masking script from https://github.com/W-L/ProblematicSites_SARS-CoV2/blob/master/src/mask_alignment_using_vcf.py
+* masking script https://github.com/W-L/ProblematicSites_SARS-CoV2/blob/master/src/mask_alignment_using_vcf.py
 
 ### Additional files cloned from github
-* nextstrain exclude list: https://github.com/nextstrain/ncov/blob/master/defaults/exclude.txt
-* problematic sites: https://github.com/W-L/ProblematicSites_SARS-CoV2/blob/master/problematic_sites_sarsCov2.vcf
+* nextstrain exclude list https://github.com/nextstrain/ncov/blob/master/defaults/exclude.txt
+* problematic sites https://github.com/W-L/ProblematicSites_SARS-CoV2/blob/master/problematic_sites_sarsCov2.vcf
 
 ## Usage
-The readme files in the individual subfolders 00 - 05 have details on running the scripts
+The readme files in the individual subfolders have details on running scripts
 
 ## Thank you
 * GISAID.org
