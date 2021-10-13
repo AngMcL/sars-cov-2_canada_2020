@@ -16,7 +16,7 @@ See parent directory
 
 * Change directory to 00_cleanData
 ```console
-foo@bar:~$cd 00_cleanData
+$cd 00_cleanData
 ```
 
 * Align sequences 
