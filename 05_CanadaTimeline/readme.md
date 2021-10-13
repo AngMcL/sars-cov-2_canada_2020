@@ -1,4 +1,4 @@
-# Canada timeline
+# 05_CanadaTimeline
 
 ## Description
 The timeline of key COVID-19 events and national level policy interventions were summarized, where dates of national-level COVID-19 interventions were obtained from the Canadian Institute for Health Information [Canadian Institutes for Health Information 2021] and key epidemiological events were obtained from a summary published by the Canadian Press via the National Post [The Canadian Press 2021]. The Stringency Index for Canada was obtained from the Oxford COVID-19 Government Response Tracker [Hale et al. 2021] and it is a composite metric of national level containment and closure policies including school and workplace closures, cancellations of public events, gathering restrictions, stay at home requirements, restrictions on internal movement, and international travel controls.
