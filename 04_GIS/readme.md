@@ -9,7 +9,7 @@ Make pretty maps using transmission data
 #Generally,
 $Rscript CanadaTransmissionMap.R <relative transmission table>
 
-#For example.
+#For example, using the actual empirical data from the manuscript
 $Rscript CanadaTransmissionMap.R "DF/BOOTS_Provinces_monthly_transmission.csv"
 ```
 
