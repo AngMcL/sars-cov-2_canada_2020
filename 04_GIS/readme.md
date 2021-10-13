@@ -1,4 +1,4 @@
-# 05_GIS
+# 04_GIS
 ## Description
 Make pretty maps of 1) COVID-19 cases across Canadian provinces, 2) Relative contribution of international sources towards transmission across Canada at the height of the first wave in April 2020. 
 
