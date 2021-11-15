@@ -14,7 +14,8 @@ $Rscript AncestralReconstruction.R <tree folder in> <clean meta in>
 $Rscript AncestralReconstruction.R "../02_trees/ft_root_res_time" "../00_cleanData/cleaned/clean_fake_meta.csv"
 ```
 
-* Pull the inferred dates of incomplete Canadian collection dates from the timetree and merge into the metadata for each bootstrap
+* Pull the inferred dates of incomplete Canadian collection dates from the timetree and merge into the metadata for each bootstrap. 
+    * Note that even if you don't have any incomplete dates, need to run this script as the output is used in the next step
     * Ouputs: DF/InfDates_metab\*.csv 
 ```console
 #generally,
