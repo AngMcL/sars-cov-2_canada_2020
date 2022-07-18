@@ -1,13 +1,16 @@
-# sars-cov-2_canada_2020
-Angela McLaughlin et al. 
+# Genomic epidemiology of the first two waves of SARS-CoV-2 in Canada
 
 ## Description
-Scripts needed to reproduce our analysis as described in the manuscript, 'Early introductions of SARS-CoV-2 sublineages into Canada drove the 2020 epidemic', in submission at eLife. Pre-print available at [medRxiv](https://www.medrxiv.org/content/10.1101/2021.04.09.21255131v3).
+Reproducible example of the analyses described in the manuscripts, 
 
-Since we are not allowed to share GISAID data publicly, a fake dataset of SARS-CoV-2 sequences simulated from a Wuhan-hu-1 origin was run through the pipeline in lieu.
+McLaughlin, A., Montoya, V., Miller, R. L., Mordecai, G. J., Canadian COVID-19 Genome Network Consortium (CanCOGen), Worobey, M., Poon, A. F. Y., & Joy, J. B. (2022). Genomic epidemiology of the first two waves of SARS-CoV-2 in Canada. eLife. https://doi.org/10.7554/eLife.73896.
+
+McLaughlin, A., Montoya, V., Miller, R. L., Mordecai, G. J., Worobey, M., Poon, A. F. Y., & Joy, J. B. (2021). Early and ongoing importations of SARS-CoV-2 in Canada [pre-print]. medRxiv. https://www.medrxiv.org/content/10.1101/2021.04.09.21255131v3.
+
+Since we are not allowed to share GISAID data publicly, a fake dataset of SARS-CoV-2 sequences simulated from a Wuhan-hu-1 origin was run through the pipeline as a reproducible example.
 
 ## Dependencies
-Note this pipeline was developed and tested on mac OX Catalina 10.15.7 
+This pipeline has been tested on macOS Catalina 10.15.7 and Monterey 12.0.1.
 
 ### Programs
 * R version 4.0.3
